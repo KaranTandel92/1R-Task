@@ -1,9 +1,20 @@
 /* CSS variable */
 :root {
-    --color: #ADB8CC;
+    --color: #adb8cc;
     --bg-color: #ffffff;
     --font-style: roboto;
     --border-radius: 50%;
+}
+
+.img1 {
+    margin: 15.5px;
+}
+
+.number {
+    font-style: var(--font-style);
+    font-size: 24px;
+    font-weight: 700;
+    color: #4d5e80;
 }
 
 /* 1st section : Bank details */
@@ -15,30 +26,18 @@
 }
 
 body {
-    background-color: #E0E0E0;
-    ;
-}
-
-#img1 {
-    margin: 15.5px;
-}
-
-.number {
-    font-style: var(--font-style);
-    font-size: 24px;
-    font-weight: 700;
-    color: #4D5E80;
+    background-color: #e0e0e0;
 }
 
 .bank {
-    color: #ADB8CC;
+    color: #adb8cc;
     line-height: 7px;
 }
 
 /* 1st section is end here  */
 /* 2ns section start here  */
 .apple {
-    background-color: #FF6633;
+    background-color: #ff6633;
     height: 250px;
     width: 250px;
     border-radius: 10px;
@@ -46,7 +45,16 @@ body {
     line-height: 25px;
 }
 
-#img2 {
+.number1 {
+    font-style: var(--font-style);
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin: 27px;
+    line-height: 60px;
+}
+
+.img2 {
     height: 25px;
     width: 20px;
     margin: 30px;
@@ -59,13 +67,6 @@ body {
     line-height: 5px;
 }
 
-.mobile {
-    font-weight: 400;
-    font-size: 30px;
-    margin: 27px;
-    line-height: 80px;
-}
-
 /* 2nd section end here  */
 /* 3rd section start here  */
 .Account {
@@ -73,16 +74,6 @@ body {
     width: 50px;
     background-color: var(--bg-color);
     border-radius: var(--border-radius);
-}
-
-#img3 {
-    margin: 15.5px;
-}
-
-.IA {
-    font-size: 24px;
-    font-weight: 700;
-    color: #4D5E80;
 }
 
 .investment {
@@ -99,16 +90,6 @@ body {
     border-radius: var(--border-radius);
 }
 
-#img4 {
-    margin: 15.5px;
-}
-
-.cbn {
-    font-size: 30px;
-    color: #4D5E80;
-    font-weight: 700;
-}
-
 .cs {
     color: var(--color);
     line-height: 5px;
@@ -123,33 +104,27 @@ body {
     border-radius: var(--border-radius);
 }
 
-#img5 {
-    margin: 15.5px;
-}
-
-.cash {
-    font-size: 30px;
-    color: #4D5E80;
-    font-weight: 700;
-}
-
 .back {
     color: var(--color);
     line-height: 5px;
 }
 
 /* 5th section end here  */
-/* 6th section google play start here  */
-.google {
+
+/* use class = Background-color img3  */
+.Background-color {
     background-color: var(--bg-color);
     width: 160px;
     height: 145px;
     border-radius: 10px;
 }
 
-#img6 {
+.img3 {
     margin: 40px 50px 60px 60px;
 }
+/* End class=Background-color img3  */
+
+/* 6th section google play start here  */
 
 .GP {
     font-size: 12px;
@@ -159,16 +134,6 @@ body {
 
 /* 6th section end here  */
 /* 7th section VPN start here  */
-.VPN {
-    background-color: var(--bg-color);
-    width: 160px;
-    height: 145px;
-    border-radius: 10px;
-}
-
-#img7 {
-    margin: 40px 50px 60px 60px;
-}
 
 .Buy {
     font-size: 12px;
@@ -178,16 +143,6 @@ body {
 
 /* 7th section end here  */
 /* 8th section service rental start here  */
-.service {
-    background-color: var(--bg-color);
-    width: 160px;
-    height: 145px;
-    border-radius: 10px;
-}
-
-#img8 {
-    margin: 40px 50px 60px 60px;
-}
 
 .rental {
     font-size: 12px;
