@@ -1,0 +1,47 @@
+body{
+    background-color: #E0E0E0;
+}
+
+.list{
+    list-style-type: none;
+    display: inline;
+    padding: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    position: absolute;
+    top:10px;
+    left:10px;
+}
+
+.option-icon{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    left:25px;
+    top:23.5px;
+}
+
+h2{
+    position: absolute;
+    top: 23px;
+    left:110px;
+}
+
+.bar{
+    position: relative;
+    top:-25px;
+    left:225px;
+}
+
+#nav-icon{
+    position: absolute;
+    top:30px;
+    left:350px;
+}
