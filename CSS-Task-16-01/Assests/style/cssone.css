@@ -5,36 +5,44 @@
     --font-style: roboto;
     --border-radius: 50%;
 }
+/* CSS variable end here */
 
+body {
+    background-color: #e0e0e0;
+}
+
+/* Style given to icon */
+.icon {
+    height: 50px;
+    width: 50px;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-color);
+    padding:5px;
+}
+/* icon style end here  */
+
+/* img1 class using for image  */
 .img1 {
     margin: 15.5px;
 }
+/* img1 style end here  */
 
+/* number class using for point style  */
 .number {
     font-style: var(--font-style);
     font-size: 24px;
     font-weight: 700;
     color: #4d5e80;
 }
+/* number style end here  */
 
-/* 1st section : Bank details */
-.icon {
-    height: 50px;
-    width: 50px;
-    border-radius: var(--border-radius);
-    background-color: var(--bg-color);
-}
-
-body {
-    background-color: #e0e0e0;
-}
-
-.bank {
+/* use device class for section name  */
+.device {
     color: #adb8cc;
     line-height: 7px;
 }
+/* device class end here  */
 
-/* 1st section is end here  */
 /* 2ns section start here  */
 .apple {
     background-color: #ff6633;
@@ -66,88 +74,45 @@ body {
     font-weight: 50;
     line-height: 5px;
 }
-
 /* 2nd section end here  */
-/* 3rd section start here  */
-.Account {
-    height: 50px;
-    width: 50px;
+
+.dispaly{
+    display: inline-block;
+    padding: 30px;
+    margin: 100px;
+}
+
+/* use class = Background img3  */
+.Background {
     background-color: var(--bg-color);
-    border-radius: var(--border-radius);
-}
-
-.investment {
-    color: var(--color);
-    line-height: 5px;
-}
-
-/* 3rd section end here  */
-/* 4th section : button start here  */
-.star {
-    height: 50px;
-    width: 50px;
-    background-color: var(--bg-color);
-    border-radius: var(--border-radius);
-}
-
-.cs {
-    color: var(--color);
-    line-height: 5px;
-}
-
-/* 4th section end here  */
-/* 5th section : cashback start here  */
-.cashback {
-    height: 50px;
-    width: 50px;
-    background-color: var(--bg-color);
-    border-radius: var(--border-radius);
-}
-
-.back {
-    color: var(--color);
-    line-height: 5px;
-}
-
-/* 5th section end here  */
-
-/* use class = Background-color img3  */
-.Background-color {
-    background-color: var(--bg-color);
-    width: 160px;
-    height: 145px;
+    width: 180px;
+    height: 170px;
     border-radius: 10px;
+    margin: 80px;
+    display: inline-block;
 }
 
 .img3 {
-    margin: 40px 50px 60px 60px;
+    width:20px;
+    height:20px;
+    margin:30px;
+    padding-left:70px;
+    padding-top: 65px;
+    border: 3px solid #F5F6F7;
+    border-radius: 50%;
+    position: relative;
+    left:13px;
 }
 /* End class=Background-color img3  */
 
-/* 6th section google play start here  */
-
-.GP {
+.device2 {
     font-size: 12px;
     font-weight: 50;
-    margin: -20px 50px 20px 40px;
+    text-align: center;
 }
 
-/* 6th section end here  */
-/* 7th section VPN start here  */
-
-.Buy {
-    font-size: 12px;
-    font-weight: 50;
-    margin: -20px 25px 20px 25px;
+.font{
+    position: absolute;
+    left:35px;
+    top:30px;
 }
-
-/* 7th section end here  */
-/* 8th section service rental start here  */
-
-.rental {
-    font-size: 12px;
-    font-weight: 50;
-    margin: -20px 22px 20px 33px;
-}
-
-/* 8th section end here  */
