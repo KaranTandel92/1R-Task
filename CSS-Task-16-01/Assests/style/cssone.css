@@ -2,13 +2,27 @@
 :root {
     --color: #adb8cc;
     --bg-color: #ffffff;
-    --font-style: roboto;
+    --font-style: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --border-radius: 50%;
 }
 /* CSS variable end here */
 
 body {
     background-color: #e0e0e0;
+}
+
+/* flex section  */
+.flex-container{
+    display: flex;
+    height:107px;
+    align-items: center;
+}
+
+.number-name{
+    font-family: var(--font-style);
+    text-align:center;
+    padding-top: 18px;
+    margin-left: 20px;
 }
 
 /* Style given to icon */
@@ -18,6 +32,11 @@ body {
     border-radius: var(--border-radius);
     background-color: var(--bg-color);
     padding:5px;
+    margin-left: 104px;;
+}
+
+.icon2{
+    margin-top: 20px;
 }
 /* icon style end here  */
 
@@ -39,7 +58,8 @@ body {
 /* use device class for section name  */
 .device {
     color: #adb8cc;
-    line-height: 7px;
+    font-size: 12px;
+    margin-top: 5px;
 }
 /* device class end here  */
 
@@ -115,4 +135,14 @@ body {
     position: absolute;
     left:35px;
     top:30px;
+}
+
+.flex-container2{
+    display: flex;
+    align-items: center;
+    margin-left:300px;
+}
+
+.newflex{
+    
 }
