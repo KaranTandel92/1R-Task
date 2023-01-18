@@ -1,47 +1,85 @@
-body{
+:root {
+    --bg-color: white;
+    --height: 50px;
+    --width: 50px;
+    --border-radius: 50%;
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
     background-color: #E0E0E0;
 }
 
-.list{
+/* left side portion */
+.list {
     list-style-type: none;
-    display: inline;
+    display: inline-block;
     padding: 5px;
+    transform: translateY(-82px);
 }
 
-a{
+.link {
+    font-family: var(--font-family);
     text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 5px;
+    color: #7D8FB3;
 }
 
-img{
-    position: absolute;
-    top:10px;
-    left:10px;
+.main {
+    font-family: var(--font-family);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #4D5E80;
+    padding-left: 60px;
+    margin: 5px;
 }
 
-.option-icon{
-    height: 50px;
-    width: 50px;
-    background-color: white;
+/* left portion end here */
+
+/* Give style of three icon */
+.icon {
+    background-color: var(--bg-color);
     border-radius: 50%;
-    position: relative;
-    left:25px;
-    top:23.5px;
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 25px;
 }
 
-h2{
-    position: absolute;
-    top: 23px;
-    left:110px;
+.sideicon {
+    padding: 15px 18px;
 }
 
-.bar{
-    position: relative;
-    top:-25px;
-    left:225px;
+/* icon style end here */
+
+.sidebar {
+    float: right;
 }
 
-#nav-icon{
-    position: absolute;
-    top:30px;
-    left:350px;
+.list2 {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    transform: translateY(-180px);
+}
+
+.clayton{
+    color:#6B7A99;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-family);
+    padding: 20px;
+    margin-top:auto;
+    transform: translateY(-185px);
+    margin-left: -2px;
+}
+
+.Notification-icon {
+    margin-left: 5px;
+}
+
+.cancel-icon {
+    margin-left: -25px;
 }
