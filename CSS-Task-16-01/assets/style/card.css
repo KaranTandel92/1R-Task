@@ -1,0 +1,21 @@
+/* Variables */
+:root{
+    --dark-blue-bg-color:#1A2233;
+    --border-radius:10px;
+    --white-color:#FFFFFF;
+    --font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* End variables */
+
+.flex-container{
+    background-color: var(--dark-blue-bg-color);
+    height: 540px;
+    width: 540px;
+    border-radius: var(--border-radius);
+}
+
+.flex-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
