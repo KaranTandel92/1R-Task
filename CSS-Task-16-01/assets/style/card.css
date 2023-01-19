@@ -1,21 +1,117 @@
 /* Variables */
-:root{
-    --dark-blue-bg-color:#1A2233;
-    --border-radius:10px;
-    --white-color:#FFFFFF;
+:root {
+    --dark-blue-20-bg-color: #1A2233;
+    --blue-gray-30-bg-color: #26334D;
+    --border-radius: 10px;
+    --white-color: #FFFFFF;
     --font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --circle-border-radius: 50%;
+    --icon-height: 60px;
+    --icon-width: 60px;
+    --large-font-size: 30px;
+    --small-font-size: 14px;
+    --bank-type-color: #6B7A99;
 }
+
 /* End variables */
 
-.flex-container{
-    background-color: var(--dark-blue-bg-color);
+/* 1st flex box */
+.main-container {
+    background-color: var(--dark-blue-20-bg-color);
     height: 540px;
     width: 540px;
     border-radius: var(--border-radius);
 }
 
-.flex-logo{
+.flex-logo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 40px;
+    padding-top: 40px;
 }
+
+.bank-logo {
+    color: var(--white-color);
+    font-size: 24px;
+}
+
+.flex-bank {
+    border-radius: var(--circle-border-radius);
+    height: var(--icon-height);
+    width: var(--icon-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-logo {
+    background-color: var(--blue-gray-30-bg-color);
+    margin-right: 40px;
+}
+
+/* 1st flex box end here */
+
+/* start 2nd flex section  */
+
+.flex-bank-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bank-icon {
+    background-color: var(--white-color);
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.usa-doller {
+    color: var(--white-color);
+    font-size: 36px;
+    margin-top: 50px;
+    margin-left: 36px;
+}
+
+/* End 2nd section */
+
+/* Start 3rd flex section */
+.flex-bank-amount {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: -80px;
+    gap: 10px;
+}
+
+.flex-usa-bank {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.current-balance {
+    color: var(--white-color);
+    font-size: var(--large-font-size);
+    font-family: var(--font-family);
+}
+
+.bank-type {
+    color: var(--bank-type-color);
+    font-size: var(--small-font-size);
+    font-family: var(--font-family);
+}
+
+/* End 3rd section */
+
+/* Line section start here */
+.line {
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.first-line {
+    color: aqua;
+}
+
+/* End line section */
