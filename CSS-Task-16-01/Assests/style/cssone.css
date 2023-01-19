@@ -4,6 +4,7 @@
     --bg-color: #ffffff;
     --font-style: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --border-radius: 50%;
+    --display:flex;
 }
 /* CSS variable end here */
 
@@ -13,7 +14,7 @@ body {
 
 /* flex section  */
 .flex-container{
-    display: flex;
+    display: var(--display);
     height:107px;
     align-items: center;
 }
@@ -34,11 +35,18 @@ body {
     padding:5px;
     margin-left: 104px;;
 }
+/* end here icon style  */
 
+/* style apply on icon2  */
 .icon2{
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin-top: 20px;
 }
-/* icon style end here  */
+/* icon2 style end here  */
+.money-saver{
+    margin-left:-360px;
+}
 
 /* img1 class using for image  */
 .img1 {
@@ -64,13 +72,20 @@ body {
 /* device class end here  */
 
 /* 2ns section start here  */
+
+.flex2{
+    display: var(--display);
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 .apple {
     background-color: #ff6633;
     height: 250px;
     width: 250px;
     border-radius: 10px;
     color: white;
-    line-height: 25px;
+    /* line-height: 25px; */
 }
 
 .number1 {
@@ -78,19 +93,19 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: white;
-    margin: 27px;
+    /* margin: 27px; */
     line-height: 60px;
 }
 
 .img2 {
     height: 25px;
     width: 20px;
-    margin: 30px;
+    /* margin: 30px; */
 }
 
 .iphone {
     font-style: Monospace;
-    margin: 27px;
+    /* margin: 27px; */
     font-weight: 50;
     line-height: 5px;
 }
@@ -135,14 +150,4 @@ body {
     position: absolute;
     left:35px;
     top:30px;
-}
-
-.flex-container2{
-    display: flex;
-    align-items: center;
-    margin-left:300px;
-}
-
-.newflex{
-    
 }
