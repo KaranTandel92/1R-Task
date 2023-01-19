@@ -4,26 +4,43 @@
     --bg-color: #ffffff;
     --font-style: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --border-radius: 50%;
-    --display:flex;
+    --display: flex;
+    --bg-color-org: #FF6633;
 }
+
+* {
+    box-sizing: border-box;
+}
+
 /* CSS variable end here */
 
 body {
     background-color: #e0e0e0;
 }
 
+.main-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
 /* flex section  */
-.flex-container{
+.flex-bankcontainer {
     display: var(--display);
-    height:107px;
+    height: 107px;
     align-items: center;
 }
 
-.number-name{
+.number-name {
     font-family: var(--font-style);
-    text-align:center;
+    text-align: center;
     padding-top: 18px;
     margin-left: 20px;
+}
+
+.img {
+    margin: 10px;
 }
 
 /* Style given to icon */
@@ -32,26 +49,29 @@ body {
     width: 50px;
     border-radius: var(--border-radius);
     background-color: var(--bg-color);
-    padding:5px;
-    margin-left: 104px;;
+    padding: 5px;
+    margin-left: 104px;
 }
+
 /* end here icon style  */
 
 /* style apply on icon2  */
-.icon2{
+.icon2 {
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-left: -114px;
 }
+
 /* icon2 style end here  */
-.money-saver{
-    margin-left:-360px;
+.money-saver {
+    margin-left: -400px;
 }
 
 /* img1 class using for image  */
 .img1 {
-    margin: 15.5px;
+    margin: 12.5px;
 }
+
 /* img1 style end here  */
 
 /* number class using for point style  */
@@ -61,6 +81,7 @@ body {
     font-weight: 700;
     color: #4d5e80;
 }
+
 /* number style end here  */
 
 /* use device class for section name  */
@@ -69,85 +90,70 @@ body {
     font-size: 12px;
     margin-top: 5px;
 }
+
 /* device class end here  */
 
 /* 2ns section start here  */
 
-.flex2{
-    display: var(--display);
-    flex-wrap: wrap;
+.flex-mobile {
+    background-color: var(--bg-color-org);
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-left: 20px;
+    margin-left: 107px;
 }
 
 .apple {
-    background-color: #ff6633;
-    height: 250px;
-    width: 250px;
-    border-radius: 10px;
     color: white;
-    /* line-height: 25px; */
-}
-
-.number1 {
-    font-style: var(--font-style);
-    font-size: 24px;
-    font-weight: 700;
-    color: white;
-    /* margin: 27px; */
-    line-height: 60px;
 }
 
 .img2 {
-    height: 25px;
+    height: 20px;
     width: 20px;
-    /* margin: 30px; */
 }
 
-.iphone {
-    font-style: Monospace;
-    /* margin: 27px; */
-    font-weight: 50;
-    line-height: 5px;
-}
 /* 2nd section end here  */
 
-.dispaly{
-    display: inline-block;
-    padding: 30px;
-    margin: 100px;
-}
-
 /* use class = Background img3  */
-.Background {
-    background-color: var(--bg-color);
-    width: 180px;
-    height: 170px;
-    border-radius: 10px;
-    margin: 80px;
-    display: inline-block;
+
+.flex-app {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-around;
 }
 
-.img3 {
-    width:20px;
-    height:20px;
-    margin:30px;
-    padding-left:70px;
-    padding-top: 65px;
+.Background {
+    display: flex;
+    background-color: var(--bg-color);
+    width: 160px;
+    height: 145px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mobile-app {
+    display: flex;
     border: 3px solid #F5F6F7;
     border-radius: 50%;
-    position: relative;
-    left:13px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
 }
-/* End class=Background-color img3  */
 
-.device2 {
+.app-name {
+    font-family: var(--font-style);
+    color: #4D5E80;
     font-size: 12px;
-    font-weight: 50;
-    text-align: center;
 }
 
-.font{
-    position: absolute;
-    left:35px;
-    top:30px;
-}
+/* End class=Background-color img3  */
