@@ -9,54 +9,64 @@
     <link rel="stylesheet" href="../assets/style/card.css">
 </head>
 
-<body>
-    <main class="container">
-        <!--Start main -->
-        <div class="main-container">
-            <!--Start 1st flex-box-->
-            <div class="flex-logo">
-                <div class="bank-logo">Your Cards</div>
-                <div class="flex-bank arrow-logo"><img src="../assets/images/Arrow Icon.png" alt="arrow icon">
-                </div>
-            </div>
-            <!--End 1st flex box-->
-            <!--start 2nd flex div-->
-            <div class="flex-bank-icon">
-                <button class="flex-bank bank-symbol"><img src="../assets/images/Icon.png" alt="icon"></button>
-                <div class="usa-doller">$ 12,566</div>
-            </div>
-            <!--End 2nd flex div-->
-            <!--start 3rd flex-div-->
-            <div class="flex-usa-bank">
-                <div class="flex-bank-amount">
-                    <span class="current-balance">$ 6,443</span>
-                    <span class="bank-type">Account Transactions</span>
-                </div>
-                <div class="flex-bank-amount">
-                    <span class="current-balance">$ 211</span>
-                    <span class="bank-type">Bank Balance</span>
-                </div>
-            </div>
-            <div class="flex-usa-bank">
-                <div class="flex-bank-amount">
-                    <span class="current-balance">$ 8,550</span>
-                    <span class="bank-type">Accumulated Cashback</span>
-                </div>
-                <div class="flex-bank-amount">
-                    <span class="current-balance">$ 501</span>
-                    <span class="bank-type">Current Balance</span>
-                </div>
-            </div>
-            <!--End 3rd div-->
-            <!--line section start-->
-            <div class="flex-logo">
-                <img src="../assets/images/Line.png" alt="Line">
-                <img src="../assets/images/New Line.png" alt="Line">
-                <img src="../assets/images/New Line.png" alt="Line">
-            </div>
-            <!--line section end-->
+<body class="container">
+    <!--start card section-->
+    <section class="main-container">
+        <!--start card header-->
+        <header class="card-header">
+            <h4 class="bank-card">Your Cards</h4>
+            <button class="circle-around-logo arrow-logo"><img src="../assets/images/Arrow Icon.png" alt="arrow icon">
+            </button>
+        </header>
+        <!--end card header-->
+        <!--start card body-->
+        <div class="flex-bank-icon">
+            <div class="circle-around-logo bank-symbol"><img src="../assets/images/Icon.png" alt="icon"></div>
+            <span class="usa-doller">$ 12,566</span>
         </div>
-    </main>
+        <div class="flex-usa-bank">
+            <div class="flex-bank-amount">
+                <span class="current-balance">$ 6,443</span>
+                <h4 class="bank-type">Account Transactions</h4>
+            </div>
+            <div class="flex-bank-amount">
+                <span class="current-balance">$ 211</span>
+                <h4 class="bank-type">Accumulated Cashback</h4>
+            </div>
+        </div>
+        <div class="flex-usa-bank">
+            <div class="flex-bank-amount">
+                <span class="current-balance">$ 8,550</span>
+                <h4 class="bank-type">Account Transactions</h4>
+            </div>
+            <div class="flex-bank-amount">
+                <span class="current-balance">$ 501</span>
+                <h4 class="bank-type">Accumulated Cashback</h4>
+            </div>
+        </div>
+        <!--End card body-->
+        <div class="line">
+            <img src="../assets/images/Line.png" alt="Line">
+            <img src="../assets/images/New Line.png" alt="Line">
+            <img src="../assets/images/New Line.png" alt="Line">
+        </div>
+        <!--line section end-->
+    </section>
+    <!--end card section-->
+    <!--start graph section-->
+    <section class="graph-container">
+        <h6 class="graph-heading">Total Sessions</h6>
+        <div class="graph-portion">
+            <span class="graph-output">456</span>
+            <img src="../assets/images/Chart.png" alt="graph" class="final-graph">
+        </div>
+        <div class="live-bar">
+            <button class="live-button">Live</button>
+            <a href="#" class="for-visitor">4 Visitors</a>
+            <a href="#" class="for-visitor">See Live View</a>
+        </div>
+    </section>
+    <!--End graph section-->
 </body>
 
 </html>
