@@ -13,7 +13,22 @@
     --bank-type-color: #6B7A99;
 }
 
+html,body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+}
 /* End variables */
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 /* 1st flex box */
 .main-container {
