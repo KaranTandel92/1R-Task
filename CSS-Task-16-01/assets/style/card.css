@@ -13,13 +13,15 @@
     --bank-type-color: #6B7A99;
 }
 
-html,body{
+html,
+body {
     height: 100%;
 }
 
-body{
+body {
     margin: 0;
 }
+
 /* End variables */
 
 .container {
@@ -27,13 +29,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 /* 1st flex box */
 .main-container {
     background-color: var(--dark-blue-20-bg-color);
-    height: 540px;
     width: 540px;
     border-radius: var(--border-radius);
 }
@@ -42,8 +42,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 40px;
-    padding-top: 40px;
+    padding: 40px 40px 40px 48px;
 }
 
 .bank-logo {
@@ -62,7 +61,6 @@ body{
 
 .arrow-logo {
     background-color: var(--blue-gray-30-bg-color);
-    margin-right: 40px;
 }
 
 /* 1st flex box end here */
@@ -73,18 +71,17 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-left: 40px;
+    padding-top: 50px;
 }
 
-.bank-icon {
+.bank-symbol {
     background-color: var(--white-color);
-    margin-left: 40px;
-    margin-top: 50px;
 }
 
 .usa-doller {
     color: var(--white-color);
     font-size: 36px;
-    margin-top: 50px;
     margin-left: 36px;
 }
 
@@ -94,21 +91,19 @@ body{
 .flex-bank-amount {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    margin-left: -80px;
-    gap: 10px;
+    padding: 50px 91px 40px 40px;
 }
 
 .flex-usa-bank {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
 }
 
 .current-balance {
     color: var(--white-color);
     font-size: var(--large-font-size);
     font-family: var(--font-family);
+    padding-bottom: 10px;
 }
 
 .bank-type {
@@ -118,15 +113,3 @@ body{
 }
 
 /* End 3rd section */
-
-/* Line section start here */
-.line {
-    margin-left: 40px;
-    margin-top: 50px;
-}
-
-.first-line {
-    color: aqua;
-}
-
-/* End line section */
