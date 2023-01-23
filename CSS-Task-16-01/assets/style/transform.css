@@ -1,0 +1,14 @@
+.div-side-container{
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    background-color: brown;
+    left: -300px;
+    transition-duration: 2s;
+}
+
+#check:checked ~ .div-side-container{
+    left: 0;
+}
+
+

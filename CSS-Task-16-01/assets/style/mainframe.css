@@ -1,0 +1,263 @@
+/* html,body{
+    height: 100%;
+} */
+
+body {
+    background-color: #F7F8FA;
+}
+
+/* variables */
+:root {
+    --header-bg-color: #F7F8FA;
+    --dark-text-color: #4D5E80;
+    --medium-light-text-color: #7D8FB3;
+    --extra-light-text-color: #ADB8CC;
+    --xl-font-weight: 700;
+    --sl-font-size: 13px;
+    --text-white-color: #FFFFFF;
+    --medium-font-size: 18px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+.head-bar {
+    width: 100%;
+}
+
+.navigation-ex-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 25px;
+    border-bottom: 2px solid #E0E0E0;
+}
+
+/* start : left side heading(nav) part */
+.left-nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.left-menu-list {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.list {
+    padding: 10px;
+}
+
+.links {
+    color: var(--medium-light-text-color);
+    font-size: var(--sl-font-size);
+    font-weight: var(--xl-font-weight);
+}
+
+.icons-bg {
+    background-color: #FFFFFF;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-name {
+    padding-left: 35px;
+    padding-right: 54px;
+    font-size: var(--medium-font-size);
+    font-weight: var(--xl-font-weight);
+    color: var(--dark-text-color);
+}
+
+/* end : left side heading part */
+
+/* start : right side heading part */
+
+.right-nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.small-name {
+    color: #6B7A99;
+    font-size: var(--sl-font-size);
+    font-weight: var(--xl-font-weight);
+    padding-left: 20px;
+}
+
+.notification-icon {
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.red-empty-notification {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    right: 88px;
+    top: 8px;
+}
+
+/* end : right side heading part */
+
+/* start : main portion  */
+/* start : bank type portion */
+.main-portion {
+    width: 1400px;
+    border-right: 2px solid #E0E0E0;
+}
+
+.bank-statement {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-right: 80px;
+}
+
+.bank-partition {
+    display: flex;
+}
+
+.bank-account {
+    padding-left: 25px;
+}
+
+.usa-doller {
+    font-size: 24px;
+    font-weight: var(--xl-font-weight);
+    color: var(--dark-text-color);
+    text-align: center;
+}
+
+.bank-type {
+    font-size: 12px;
+    font-weight: var(--xl-font-weight);
+    color: var(--extra-light-text-color);
+    text-align: center;
+}
+
+/* end : bamnk type portion */
+
+/* start: bank card section */
+
+.bank-card {
+    padding: 40px;
+    width: 590px;
+    background-color: #1A2233;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.card-name {
+    font-size: 24px;
+    font-weight: var(--xl-font-weight);
+    color: var(--text-white-color);
+}
+
+.click-arrow {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #26334D;
+    border: 0;
+}
+
+.card-logo-doller {
+    display: flex;
+    align-items: center;
+}
+
+.bank-doller {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--text-white-color);
+    padding-left: 36px;
+}
+
+.bank-doller-list {
+    display: flex;
+}
+
+.small-amount {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-basis: 50%;
+}
+
+.doller-amount {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-white-color);
+}
+
+.list-type {
+    font-size: 14px;
+    font-weight: var(--xl-font-weight);
+    color: var(--text-white-color);
+}
+
+/* end : card section */
+
+/* start : transaction portion */
+
+.stock-transaction{
+    width: 590px;
+    background-color: #FFFFFF;
+    padding: 40px;
+}
+
+.stock-trns-heading{
+    font-size: 24px;
+    font-weight: var(--xl-font-weight);
+    color: var(--dark-text-color);
+    text-align: center;
+    padding-top: 40px;
+}
+
+.icon-bg-color{
+    background-color: #F7F8FA;
+}
+
+.stock-text-color{
+    color: var(--dark-text-color);
+}
+
+.stock-list{
+    /* padding-left: 25px; */
+    /* padding-right: 177px; */
+}
+
+.stock-play-list{
+    justify-content: space-between;
+}
+
+.usa-stock-in-doller{
+    font-size: var(--medium-font-size);
+    color: var(--dark-text-color);
+    font-weight: var(--xl-font-weight);
+}
+/* end : transaction portion */

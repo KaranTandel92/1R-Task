@@ -138,9 +138,9 @@ body {
 .graph-container {
     background-color: var(--white-color);
     width: 270px;
-    padding: 30px 20px 20px 20px;
+    /* padding: 30px 20px 20px 20px; */
     border-radius: 10px;
-    margin-left:143px;
+    margin-left: 143px;
     margin-bottom: 204px;
 }
 
@@ -148,6 +148,11 @@ body {
     font-size: var(--small-text-grpah);
     font-weight: 700;
     color: var(--small-font-color);
+}
+
+.chart-upper-part{
+    border-bottom: 2px solid black;
+    padding: 20px;
 }
 
 .graph-portion {
@@ -197,4 +202,7 @@ body {
     color: #6B7A99;
 }
 
+.live-portion-footer{
+    padding: 5px;
+}
 /* end second card */
