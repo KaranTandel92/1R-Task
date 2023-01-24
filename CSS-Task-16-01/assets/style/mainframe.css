@@ -1,9 +1,12 @@
-/* html,body{
+html,
+body {
     height: 100%;
-} */
+}
 
 body {
     background-color: #F7F8FA;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
 /* variables */
@@ -14,6 +17,7 @@ body {
     --extra-light-text-color: #ADB8CC;
     --xl-font-weight: 700;
     --sl-font-size: 13px;
+    --large-font-size: 24px;
     --text-white-color: #FFFFFF;
     --medium-font-size: 18px;
 }
@@ -35,7 +39,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 5px 25px;
+    padding: 20px 25px;
     border-bottom: 2px solid #E0E0E0;
 }
 
@@ -63,12 +67,16 @@ body {
 
 .icons-bg {
     background-color: #FFFFFF;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.click-icon{
+    cursor: pointer;
 }
 
 .head-name {
@@ -112,16 +120,26 @@ body {
     border-radius: 50%;
     background-color: red;
     position: absolute;
-    right: 88px;
-    top: 8px;
+    right: 100px;
+    top: 20px;
 }
 
 /* end : right side heading part */
 
+/* start : style main container */
+
+.main-container{
+    display: flex;
+}
+
+/* end : main container style  */
+
+
 /* start : main portion  */
+
 /* start : bank type portion */
 .main-portion {
-    width: 1400px;
+    width: 1500px;
     border-right: 2px solid #E0E0E0;
 }
 
@@ -141,7 +159,7 @@ body {
 }
 
 .usa-doller {
-    font-size: 24px;
+    font-size: var(--large-font-size);
     font-weight: var(--xl-font-weight);
     color: var(--dark-text-color);
     text-align: center;
@@ -224,50 +242,248 @@ body {
 
 /* start : transaction portion */
 
-.stock-transaction{
+.stock-transaction {
     width: 590px;
     background-color: #FFFFFF;
     border-radius: 10px;
     margin-right: 30px;
+    padding: 40px 40px 47px 40px;
 }
 
-.stock-trns-heading{
+.stock-trns-heading {
     font-size: 24px;
     font-weight: var(--xl-font-weight);
     color: var(--dark-text-color);
     text-align: center;
-    padding-top: 40px;
+    padding-bottom: 30px;
 }
 
-.icon-bg-color{
+.caption-transaction {
+    display: flex;
+    align-items: center;
+}
+
+.icon-bg-color {
     background-color: #F7F8FA;
 }
 
-.stock-text-color{
+.stock-text {
     color: var(--dark-text-color);
 }
 
-.stock-list{
+.stock-list {
     padding-left: 25px;
-    flex-grow: 1;
 }
 
-.stock-play-list{
+.stock-play-list {
     justify-content: space-between;
-    padding: 30px 40px 20px 40px;
-    flex-grow: 1;
+    padding-bottom: 20px;
 }
 
-.usa-stock-in-doller{
+.usa-stock-in-doller {
     font-size: var(--medium-font-size);
     color: var(--dark-text-color);
     font-weight: var(--xl-font-weight);
-    flex-grow: 2;
-    text-align: end;
 }
+
 /* end : transaction portion */
 
-.bank-with-stock{
+.bank-with-stock {
     display: flex;
     justify-content: space-between;
 }
+
+.cashback-transaction {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.only-one-transaction {
+    background-color: #8833FF;
+    font-weight: var(--xl-font-weight);
+    color: var(--text-white-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 195px 30px;
+}
+
+
+.fisrt-transaction {
+    font-size: var(--medium-font-size);
+}
+
+.received-cash {
+    font-size: var(--large-font-size);
+}
+
+.cash-graph{
+    width: 590px;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 30px;
+    padding-top: 20px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.cash-graph-image{
+    padding-bottom: 16.5px;
+    padding-top: 0px;
+}
+
+.cash-heading{
+    padding-left: 20px;
+}
+
+/* start : style to online services */
+
+
+.online-service-container{
+    width: 176px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0 25px 0;
+}
+
+.online-service-icon{
+    border: 3px solid #F5F6F7;
+}
+
+.online-service-heading{
+    font-size: 12px;
+    font-weight: var(--xl-font-weight);
+    color:var(--dark-text-color);
+    padding-top: 15px;
+}
+
+.caption-online-service{
+    display: flex;
+    width: 590px;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+/* end : main section */
+
+/* start : phone caption */
+
+.apple-mobile{
+    width: 280px;
+    background-color: #FF6633;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 45px 0 40px 47px;
+}
+
+.mobile-caption-name{
+    font-size: var(--medium-font-size);
+    font-weight: var(--xl-font-weight);
+    color: var(--text-white-color);
+    padding-top: 25.4px;
+}
+
+.mobile-price{
+    font-size: 36px;
+    font-weight: 400;
+    color:var(--text-white-color);
+    padding-top: 35px;
+}
+
+.battery-percentage{
+    width: 280px;
+    border-radius: 10px;
+    background-color: #33BFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 86.5px 0 81.5px 0;
+    margin-left: 30px;
+}
+
+.mobile-battery-percentage{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-white-color);
+    display: flex;
+    padding-top: 17px;
+}
+
+.phone-caption{
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-section{
+    display: flex;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+/* end : phone caption */
+
+.cash-mobile{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Start : aside style portion */
+
+.small-graph-caption{
+    width: 330px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.small-graph-heading{
+    font-size: 12px;
+    font-weight: var(--xl-font-weight);
+    color: #6B7A99;
+}
+
+.graph-number{
+    font-size: var(--large-font-size);
+    font-weight: var(--xl-font-weight);
+    color: var(--dark-text-color);
+}
+
+.live-screen{
+    font-size: 12px;
+    font-weight: 900;
+    color: #8833FF;
+    background-color: #8833ff1a;
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+.result{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.live-footer-portion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.graph-result{
+    padding: 20px;
+    border-bottom: 2px solid #E0E0E0;
+}
+
+.sidebar{
+    padding: 30px;
+}
+
+/* end : aside style */
