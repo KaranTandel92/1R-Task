@@ -227,7 +227,8 @@ body {
 .stock-transaction{
     width: 590px;
     background-color: #FFFFFF;
-    padding: 40px;
+    border-radius: 10px;
+    margin-right: 30px;
 }
 
 .stock-trns-heading{
@@ -247,17 +248,26 @@ body {
 }
 
 .stock-list{
-    /* padding-left: 25px; */
-    /* padding-right: 177px; */
+    padding-left: 25px;
+    flex-grow: 1;
 }
 
 .stock-play-list{
     justify-content: space-between;
+    padding: 30px 40px 20px 40px;
+    flex-grow: 1;
 }
 
 .usa-stock-in-doller{
     font-size: var(--medium-font-size);
     color: var(--dark-text-color);
     font-weight: var(--xl-font-weight);
+    flex-grow: 2;
+    text-align: end;
 }
 /* end : transaction portion */
+
+.bank-with-stock{
+    display: flex;
+    justify-content: space-between;
+}
