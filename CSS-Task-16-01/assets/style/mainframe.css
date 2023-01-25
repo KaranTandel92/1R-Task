@@ -5,7 +5,7 @@ body {
 
 body {
     background-color: #F7F8FA;
-    max-width: 1800px;
+    max-width: 1900px;
     margin: 0 auto;
 }
 
@@ -484,6 +484,15 @@ body {
 
 .sidebar{
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.scrollbar{
+    overflow: auto;
+    padding-top: 30px;
+    width: 300px;
 }
 
 /* end : aside style */
