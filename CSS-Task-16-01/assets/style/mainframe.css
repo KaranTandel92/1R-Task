@@ -75,7 +75,7 @@ body {
     align-items: center;
 }
 
-.click-icon{
+.click-icon {
     cursor: pointer;
 }
 
@@ -128,7 +128,7 @@ body {
 
 /* start : style main container */
 
-.main-container{
+.main-container {
     display: flex;
 }
 
@@ -318,7 +318,7 @@ body {
     font-size: var(--large-font-size);
 }
 
-.cash-graph{
+.cash-graph {
     width: 590px;
     background-color: white;
     border-radius: 10px;
@@ -328,19 +328,19 @@ body {
     margin-top: 30px;
 }
 
-.cash-graph-image{
+.cash-graph-image {
     padding-bottom: 16.5px;
     padding-top: 0px;
 }
 
-.cash-heading{
+.cash-heading {
     padding-left: 20px;
 }
 
 /* start : style to online services */
 
 
-.online-service-container{
+.online-service-container {
     width: 176px;
     background-color: white;
     border-radius: 10px;
@@ -352,18 +352,18 @@ body {
     padding: 25px 0 25px 0;
 }
 
-.online-service-icon{
+.online-service-icon {
     border: 3px solid #F5F6F7;
 }
 
-.online-service-heading{
+.online-service-heading {
     font-size: 12px;
     font-weight: var(--xl-font-weight);
-    color:var(--dark-text-color);
+    color: var(--dark-text-color);
     padding-top: 15px;
 }
 
-.caption-online-service{
+.caption-online-service {
     display: flex;
     width: 590px;
     justify-content: space-between;
@@ -374,7 +374,7 @@ body {
 
 /* start : phone caption */
 
-.apple-mobile{
+.apple-mobile {
     width: 280px;
     background-color: #FF6633;
     border-radius: 10px;
@@ -383,21 +383,21 @@ body {
     padding: 45px 0 40px 47px;
 }
 
-.mobile-caption-name{
+.mobile-caption-name {
     font-size: var(--medium-font-size);
     font-weight: var(--xl-font-weight);
     color: var(--text-white-color);
     padding-top: 25.4px;
 }
 
-.mobile-price{
+.mobile-price {
     font-size: 36px;
     font-weight: 400;
-    color:var(--text-white-color);
+    color: var(--text-white-color);
     padding-top: 35px;
 }
 
-.battery-percentage{
+.battery-percentage {
     width: 280px;
     border-radius: 10px;
     background-color: #33BFFF;
@@ -409,7 +409,7 @@ body {
     margin-left: 30px;
 }
 
-.mobile-battery-percentage{
+.mobile-battery-percentage {
     font-size: 30px;
     font-weight: 500;
     color: var(--text-white-color);
@@ -417,44 +417,45 @@ body {
     padding-top: 17px;
 }
 
-.phone-caption{
+.phone-caption {
     display: flex;
     flex-direction: column;
 }
 
-.mobile-section{
+.mobile-section {
     display: flex;
     padding-left: 30px;
     padding-top: 30px;
 }
+
 /* end : phone caption */
 
-.cash-mobile{
+.cash-mobile {
     display: flex;
     justify-content: space-between;
 }
 
 /* Start : aside style portion */
 
-.small-graph-caption{
+.small-graph-caption {
     width: 330px;
     background-color: white;
     border-radius: 10px;
 }
 
-.small-graph-heading{
+.small-graph-heading {
     font-size: 12px;
     font-weight: var(--xl-font-weight);
     color: #6B7A99;
 }
 
-.graph-number{
+.graph-number {
     font-size: var(--large-font-size);
     font-weight: var(--xl-font-weight);
     color: var(--dark-text-color);
 }
 
-.live-screen{
+.live-screen {
     font-size: 12px;
     font-weight: 900;
     color: #8833FF;
@@ -464,32 +465,32 @@ body {
     border-radius: 5px;
 }
 
-.result{
+.result {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
 }
 
-.live-footer-portion{
+.live-footer-portion {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
 }
 
-.graph-result{
+.graph-result {
     padding: 20px;
     border-bottom: 2px solid #E0E0E0;
 }
 
-.sidebar{
+.sidebar {
     padding: 30px;
     display: flex;
     flex-direction: column;
     height: 500px;
 }
 
-.scrollbar{
+.scrollbar {
     overflow: auto;
     padding-top: 30px;
     width: 300px;
