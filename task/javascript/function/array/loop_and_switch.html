@@ -26,6 +26,15 @@
             document.write(b[i] + " ");
         }
 
+        // palindrome
+
+        // if (a == b) {
+        //     document.write(is palindrome);
+        // }
+        // else {
+        //     document.write(not a palindrome);
+        // }
+
         document.write("<br>");
 
         //Armstrong number
@@ -80,17 +89,51 @@
         document.write("<br>");
 
         //Movie
-        // let movie = [{
-        //     name = "DJ";
-        //     director = "Yashraj";
-        //     alreadywatched = true
-        // },
-        // {
-        //     name = "Spiderman";
-        //     director = "silvestostelon";
-        //     alreadywatched = true
-        // },
-        // ]
+        let movielist = [
+            {
+                title: "Spiderman",
+                director: "stan Lee",
+                alreadywatched: true
+            },
+            {
+                title: "Inception",
+                director: "Christoper Nolan",
+                alreadywatched: false
+            },
+            {
+                title: "Krrish",
+                director: "Rakesh Roshan",
+                alreadywatched: true
+            },
+            {
+                title: "DJ",
+                director: "Nityanand",
+                alreadywatched: true
+            }
+        ];
+
+        for (i = 0; i < movielist.length; i++) {
+            //console.log(typeof movielist[i]);
+            if (movielist[i].alreadywatched === true) {
+                document.write(`You have alreday watched ${movielist[i].title} by ${movielist[i].director}. <br>`);
+
+            } else {
+                document.write(`You still need to watch ${movielist[i].title} by ${movielist[i].director}. <br>`);
+            }
+        }
+
+
+        debugger
+        for (i = 0; i <= 10; ++i) {
+            debugger
+            console.log(i);
+        }
+
+        for (i = 10; i >= 0; i--) {
+            console.log(i);
+        }
+
+
     </script>
 </body>
 
