@@ -142,7 +142,7 @@ body {
 
 .notification-icon {
     margin: 0 10px 0 30px;
-    position: relative;
+    /* position: relative; */
 }
 
 .notification-icon::after {
@@ -152,7 +152,7 @@ body {
     width: 10px;
     background-color: red;
     border-radius: 50%;
-    top: 0px;
+    top: 22px;
     right: 0px;
 }
 
