@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kanban-inventory</title>
+    <link rel="stylesheet" href="/reassessment1-8-02/assets/style.css">
+</head>
+
+<body>
+    <div class="wrapper d-flex overflow-hidden flex-grow-1">
+        <input type="checkbox" class="display-none" id="toggle">
+        <aside class="sidebar d-flex f-column h-100">
+            <div class="list d-flex f-column">
+                <div class="d-flex align-center">
+                    <img src="/assessment1-30-01/assets/images/kanban icon.png" alt="KANBAN icon"
+                        class="margin-right-12">
+                    <img src="/assessment1-30-01/assets/images/KANBAN.png" alt="KANBAN">
+                </div>
+                <ul class="first-list d-flex f-column">
+                    <li class="item-list  d-flex align-center"><img src="/assessment1-30-01/assets/images/dashboard.png"
+                            alt="dashboard"><a href="#" class="link-list">Dashboard</a>
+                    </li>
+                    <li class="item-list d-flex align-center"><img src="/assessment1-30-01/assets/images/inventory.png"
+                            alt="inventory"><a href="#" class="link-list active">Inventory</a>
+                    </li>
+                    <li class="item-list d-flex align-center"><img src="/assessment1-30-01/assets/images/report.png"
+                            alt="reports"><a href="#" class="link-list">Reports</a>
+                    </li>
+                    <li class="item-list d-flex align-center"><img src="/assessment1-30-01/assets/images/supplier.png"
+                            alt="supplier"><a href="#" class="link-list">Suppliers</a>
+                    </li>
+                    <li class="item-list d-flex align-center"><img src="/assessment1-30-01/assets/images/orders.png"
+                            alt="orders"><a href="#" class="link-list">Orders</a>
+                    </li>
+                    <li class="item-list d-flex align-center"><img
+                            src="/assessment1-30-01/assets/images/managestoreicon.jpg" alt="manage"><a href="#"
+                            class="link-list">Manage
+                            Store</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="second-list d-flex f-column">
+                    <li class="item-list d-flex align-center"><img src="/assessment1-30-01/assets/images/settings.png"
+                            alt="settings"><a href="#" class="link-list">Settings
+                        </a></li>
+                    <li class="item-list d-flex align-center"><img src="/assessment1-30-01/assets/images/log out.png"
+                            alt="log out"><a href="#" class="link-list">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <main class="main-container d-flex f-column overflow-hidden flex-grow-1">
+            <header class="header d-flex justify-spacebetween">
+                <div class="left-head">
+                    <label for="toggle">
+                        <img src="/assessment1-30-01/assets/images/hambuger menu.png" alt="humberger menu"
+                            class="cursor-pointer"></label>
+                    <input type="text" class="searchbar" placeholder="Search product, supplier, order">
+                </div>
+                <div class="right-head d-flex">
+                    <button class="bell-icon background-none"><img src="/assessment1-30-01/assets/images/bell.png"
+                            alt="bell icon" class="head-right-icon cursor-pointer"></button>
+                    <button class="sign-icon background-none"><img src="/assessment1-30-01/assets/images/andrey.png"
+                            alt="human icon" class="border-radius-50 cursor-pointer"></button>
+                </div>
+            </header>
+            <div class="overall-data d-flex f-column overflow-hidden flex-grow-1">
+                <div class="card d-flex f-column">
+                    <h4 class="heading">Overall Inventory</h4>
+                    <div class="d-flex margin-top-22">
+                        <section class="first-categorie d-flex f-column">
+                            <h5 class="caption">Categories</h5>
+                            <span class="caption1">14</span>
+                            <span class="caption2">Last 7 days</span>
+                        </section>
+                        <section></section>
+                        <section></section>
+                        <section></section>
+                    </div>
+                </div>
+                <div class="stock-section d-flex f-column overflow-hidden flex-grow-1">
+                    <section class="d-flex flex-grow-1 justify-spacebetween align-center">
+                        <div>Products</div>
+                        <div>
+                            <button class="click-button">Add Product</button>
+                            <button class="click-button key-button"><img
+                                    src="/assessment1-30-01/assets/images/filter.png" alt="filter"
+                                    class="padding-right">Filters</button>
+                            <button class="click-button key-button">Download all</button>
+                        </div>
+                    </section>
+                    <section class="data-storage">
+                        <table class="table">
+                            <thead>
+                                <td class="table-heading">Products</td>
+                                <td class="table-heading">Buying Price</td>
+                                <td class="table-heading">Quantity</td>
+                                <td class="table-heading">Threshold Value</td>
+                                <td class="table-heading">Expiry Date</td>
+                                <td class="table-heading">Availability</td>
+                            </thead>
+                            <tr>
+                                <td class="table-data">Maggi</td>
+                                <td class="table-data">₹430</td>
+                                <td class="table-data">43 Packets</td>
+                                <td class="table-data">12 Packets</td>
+                                <td class="table-data">11/12/22</td>
+                                <td class="table-data stock-inside">In- stock</td>
+                            </tr>
+                            <tr>
+                                <td class="table-data">Bru</td>
+                                <td class="table-data">₹257</td>
+                                <td class="table-data">22 Packets</td>
+                                <td class="table-data">12 Packets</td>
+                                <td class="table-data">21/12/22</td>
+                                <td class="table-data stock-outside">Out of stock</td>
+                            </tr>
+                            <tr>
+                                <td class="table-data">Red Bull</td>
+                                <td class="table-data">₹405</td>
+                                <td class="table-data">36 Packets</td>
+                                <td class="table-data">9 Packets</td>
+                                <td class="table-data">5/12/22</td>
+                                <td class="table-data stock-inside">In- stock</td>
+                            </tr>
+                            <tr>
+                                <td class="table-data">Bourn Vita</td>
+                                <td class="table-data">₹502</td>
+                                <td class="table-data">14 Packets</td>
+                                <td class="table-data">6 Packets</td>
+                                <td class="table-data">8/12/22</td>
+                                <td class="table-data stock-outside">Out of stock</td>
+                            </tr>
+                            <tr>
+                                <td class="table-data">Horlicks</td>
+                                <td class="table-data">₹530</td>
+                                <td class="table-data">5 Packets</td>
+                                <td class="table-data">5 Packets</td>
+                                <td class="table-data">9/1/23</td>
+                                <td class="table-data stock-inside">In- stock</td>
+                            </tr>
+                            <tr>
+                                <td class="table-data">Harpic</td>
+                                <td class="table-data">₹605</td>
+                                <td class="table-data">10 Packets</td>
+                                <td class="table-data">5 Packets</td>
+                                <td class="table-data">9/1/23</td>
+                                <td class="table-data stock-inside">In- stock</td>
+                            </tr>
+                            <tr>
+                                <td class="table-data">Ariel</td>
+                                <td class="table-data">₹408</td>
+                                <td class="table-data">23 Packets</td>
+                                <td class="table-data">7 Packets</td>
+                                <td class="table-data">15/12/23</td>
+                                <td class="table-data stock-outside">Out of stock</td>
+                            </tr>
+                            <tr>
+                                <td class="table-data">Scotch Brite</td>
+                                <td class="table-data">₹359</td>
+                                <td class="table-data">43 Packets</td>
+                                <td class="table-data">8 Packets</td>
+                                <td class="table-data">6/6/23</td>
+                                <td class="table-data stock-inside">In- stock</td>
+                            </tr>
+                            <tr>
+                                <td class="table-data border-bottom-none-and-padding-zero">Coca cola</td>
+                                <td class="table-data border-bottom-none-and-padding-zero">₹205</td>
+                                <td class="table-data border-bottom-none-and-padding-zero">41 Packets</td>
+                                <td class="table-data border-bottom-none-and-padding-zero">10 Packets</td>
+                                <td class="table-data border-bottom-none-and-padding-zero">11/11/22</td>
+                                <td class="table-data lowstock border-bottom-none-and-padding-zero">Low stock</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="d-flex justify-spacebetween">
+                        <div><button class="click-button key-button previous-key-button">Previous</button></div>
+                        <div>Page 1 of 10</div>
+                        <div><button class="click-button key-button next-key-button">Next</button></div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
