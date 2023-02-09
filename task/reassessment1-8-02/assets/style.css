@@ -54,7 +54,7 @@ body {
 }
 
 #toggle:checked+.sidebar {
-    transform: translate(-280px);
+    transform: translate(-280);
     width: 0;
     flex: 0 0 0;
 }
@@ -152,6 +152,41 @@ body {
     font-weight: var(--font-weight-400);
     color: var(--gray-400);
 }
+
+.first-categorie {
+    flex-basis: 0.7;
+    padding-right: 75px;
+    border-right: 1px solid var(--gray-50);
+}
+
+.second-categorie,
+.third-categorie,
+.fourth-categorie {
+    flex: 1;
+    padding-left: 55px;
+    border-right: 1px solid var(--gray-50);
+}
+
+.fourth-categorie {
+    border: 0;
+}
+
+.revenue-cost {
+    padding-left: 47px;
+}
+
+.product-details {
+    color: #E19133;
+}
+
+.selling-details {
+    color: #845EBC;
+}
+
+.low-stock-details {
+    color: #F36960;
+}
+
 
 /* table section */
 

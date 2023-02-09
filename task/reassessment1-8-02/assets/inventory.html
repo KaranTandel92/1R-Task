@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper d-flex overflow-hidden flex-grow-1">
         <input type="checkbox" class="display-none" id="toggle">
-        <aside class="sidebar d-flex f-column h-100">
+        <aside class="sidebar d-flex f-column justify-spacebetween h-100">
             <div class="list d-flex f-column">
                 <div class="d-flex align-center">
                     <img src="/assessment1-30-01/assets/images/kanban icon.png" alt="KANBAN icon"
@@ -71,15 +71,47 @@
             <div class="overall-data d-flex f-column overflow-hidden flex-grow-1">
                 <div class="card d-flex f-column">
                     <h4 class="heading">Overall Inventory</h4>
-                    <div class="d-flex margin-top-22">
+                    <div class="d-flex margin-top-22 justify-spacebetween">
                         <section class="first-categorie d-flex f-column">
                             <h5 class="caption">Categories</h5>
                             <span class="caption1">14</span>
                             <span class="caption2">Last 7 days</span>
                         </section>
-                        <section></section>
-                        <section></section>
-                        <section></section>
+                        <section class="second-categorie d-flex f-column">
+                            <h5 class="caption product-details">Total Products</h5>
+                            <div class="d-flex">
+                                <div>
+                                    <span class="caption1 d-flex">868</span>
+                                    <span class="caption2">Last 7 days</span>
+                                </div>
+                                <div class="revenue-cost">
+                                    <span class="caption1 d-flex">₹25000</span>
+                                    <span class="caption2">Revenue</span>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="third-categorie">
+                            <h5 class="caption selling-details">Top Selling</h5>
+                            <div>
+                                <span class="caption1">5</span>
+                                <span class="caption2">Last 7 days</span>
+                            </div>
+                            <div>
+                                <span class="caption1">₹2500</span>
+                                <span class="caption2">Cost</span>
+                            </div>
+                        </section>
+                        <section class="fourth-categorie">
+                            <h5 class="caption low-stock-details">Low Stocks</h5>
+                            <div>
+                                <span class="caption1">12</span>
+                                <span class="caption2">Ordered</span>
+                            </div>
+                            <div>
+                                <span class="caption1">2</span>
+                                <span class="caption2">Not in stock</span>
+                            </div>
+                        </section>
                     </div>
                 </div>
                 <div class="stock-section d-flex f-column overflow-hidden flex-grow-1">
