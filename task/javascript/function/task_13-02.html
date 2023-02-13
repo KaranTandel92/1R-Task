@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Write a JavaScript function that reverse a number
+        let arr = [1, 2, 3, 4, 5]
+
+        for (let i = arr.length; i > 0; i--) {
+            console.log(i);
+        }
+
+        // Write a JavaScript function that returns a passed string with letters in alphabetical order
+        let arr1 = ["Chintu", "Sujit", "Dhaval", "Akshit", "Karan"]
+
+        for (const i of arr1) {
+            console.log(i);
+        }
+
+        // Write a JavaScript function that accepts a string as a parameter and find the longest word within the string
+
+        let str = "Chintu will go to bangloru for leraning web designing";
+
+        let arr2 = str.split(' ');
+
+        let newarr = [];
+
+        for (let i of arr2) {
+            newarr.push(i.length);
+        }
+
+        let arrsort = newarr.sort(function (a, b) {
+            return b - a;
+        })
+
+        let result = arr2.filter((val) => val.length === arrsort[0]);
+
+        console.log(result.join());
+
+        // Write a JavaScript program to pass a 'JavaScript function' as parameter
+
+        function first() {
+            console.log("Hello");
+        }
+
+        function add(num1, num2, first) {
+            console.log(num1 + num2);
+            first();
+        }
+
+        add(1, 2, first);
+
+        //Write a JavaScript function to get the function name
+
+        let getFunction = function () { };
+
+        let object = {
+            newFunction: function () { }
+        };
+
+        console.log(getFunction.name, object.newFunction.name);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

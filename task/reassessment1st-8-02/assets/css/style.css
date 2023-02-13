@@ -65,10 +65,11 @@ body {
 }
 
 .item-list:hover {
-    padding: 15px;
+    padding: 30px 0;
     background-color: var(--gray-50);
     border-radius: 10px;
     cursor: pointer;
+
 }
 
 .sidebar .link-list {

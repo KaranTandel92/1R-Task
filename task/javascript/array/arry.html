@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Remove duplicate value from an array
+
+        const app = () => {
+            return "My name"
+        }
+
+        console.log(app)
+
+        // Using filter function
+        let x = [1, 1, 1, 2, 2, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6, "hummar", "royal-enfiled"];
+
+
+        function newArr(x) {
+            return x.filter((item, index) => x.indexOf(item) === index);
+        }
+        console.log(newArr(x));
+
+
+        // Using foreach loop
+
+        function rDuplicate(array) {
+            let a = {};
+
+            array.forEach(function (i) {
+                if (!a[i]) {
+                    a[i] = true
+                }
+            });
+            return Object.keys(a);
+        }
+        console.log(rDuplicate(x));
+
+        // using array method
+
+        let m = [];
+
+        x.forEach((item) => {
+            if (!item === m.includes(item))
+                m.push(item);
+        })
+        console.log(m);
+
+        // 
+
+        function newone(array) {
+            return [...new set(x)];
+        }
+        console.log(newone(x));
+    </script>
+</body>
+
+</html>
