@@ -12,11 +12,14 @@
     <script>
 
         // Write a JavaScript function that reverse a number
-        let arr = [1, 2, 3, 4, 5]
+        // debugger
 
-        for (let i = arr.length; i > 0; i--) {
-            console.log(i);
+        function reverse(number) {
+            number1 = number.toString();
+            return number1.split("").reverse().join("");
         }
+        number2 = reverse(3202);
+        console.log(Number(number2));
 
         // Write a JavaScript function that returns a passed string with letters in alphabetical order
         let arr1 = ["Chintu", "Sujit", "Dhaval", "Akshit", "Karan"]
@@ -27,7 +30,7 @@
 
         // Write a JavaScript function that accepts a string as a parameter and find the longest word within the string
 
-        let str = "Chintu will go to bangloru for leraning web designing";
+        let str = "Now i am learning a javascript";
 
         let arr2 = str.split(' ');
 
@@ -44,6 +47,19 @@
         let result = arr2.filter((val) => val.length === arrsort[0]);
 
         console.log(result.join());
+
+
+        // Write a JavaScript function that accept a list of country names as input and returns the longest country name as output
+
+        let list = ["America", "INDIA", "Hongkong", "UAE"];
+
+        let arr3 = [];
+
+        for (let item of list) {
+            arr3.push(item.length);
+        }
+
+        console.log(arr3);
 
         // Write a JavaScript program to pass a 'JavaScript function' as parameter
 
