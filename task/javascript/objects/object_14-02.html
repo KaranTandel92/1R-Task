@@ -35,6 +35,10 @@
 
         // let objone = {};
 
+        // for (const key in obj) {
+        //     objone[obj[key]] = key;
+        // }
+
         function addNew(firstvalue) {
             firstobj = {}
             for (const key in obj) {
@@ -43,17 +47,28 @@
             return firstobj;
         }
 
-        // for (const key in obj) {
-        //     objone[obj[key]] = key;
-        // }
-
         console.log(addNew(obj));
 
         //4. Write a JavaScript program to find the most frequent item of an array.
 
+        let arrays = [1, 2, 3, 3, 3, 3, 4, 4, 5, 3];
+
+        function FrequentNumber(frequentValue) {
+            // let frequentNewNumber = frequentValue.split("");
+            let getNumber = 0;
+            for (const item of frequentValue) {
+                if (item == 3) {
+                    getNumber++;
+                }
+            }
+            return getNumber;
+        }
+
+        console.log(FrequentNumber(arrays));
+
         //5. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
 
-        let num = [1, 2, 2, 3, 3, 4, 5, 6, 6, 6, 7, 7, 8];
+        let num = [1, 2, 2, 3, 3, 4, 5, 6, 6, 6, 7, 7, 8, 9, 9, 11, 11, 12, 13];
 
         function requireUniqueNumber(number) {
             let num5 = new Set(num);
@@ -70,17 +85,17 @@
         let arr2 = [2, 3, 4, 5, 6];
 
         function removeDuplicate(arrone, arrtwo) {
-
             let arr3 = arr1.concat(arr2);
-            let arr4 = [];
+            let arr4 = new Set(arr3);
+            console.log([...arr4]);
 
+            // for (const i of arr3) {
+            //     if (arr4.indexOf(i) === -1) {
+            //         arr4.push(i);
+            //     }
+            // }
+            // console.log(arr4);
 
-            for (const i of arr3) {
-                if (arr4.indexOf(i) === -1) {
-                    arr4.push(i);
-                }
-            }
-            console.log(arr4);
         }
 
         removeDuplicate(arr1, arr2);
@@ -98,23 +113,28 @@
 
         //  8. Write a JavaScript function to get a random item from an array.[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-        function randomNumber(max, min) {
-            let a = Math.floor(Math.random() * (max - min + 1) + min);
-            return a;
+        let a = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+
+        function randomNumberOneToTen(uniquevalue) {
+            let len = a.length;
+            let unique = Math.floor(Math.random() * len);
+            console.log(uniquevalue[unique]);
         }
 
-        console.log(randomNumber(0, 11));
+        randomNumberOneToTen(a);
 
         // 9. Write a JavaScript function to filter false, null, 0 and blank values from an array.[58, '', 'abcd', true, null, false, 0]
 
         let arrone = [58, '', 'abcd', true, null, false, 0];
 
-        console.log(arrone.filter((value) => {
-            if (value === false || value === null || value === 0 || value === "") {
-                console.log(value);
-                //return value;
+        let arrayfirst = arrone.filter((value) => {
+            if (value !== false || value !== null || value !== 0 || value !== "") {
+                return value;
             }
-        }));
+        });
+
+        console.log(arrayfirst);
+
 
     </script>
 
