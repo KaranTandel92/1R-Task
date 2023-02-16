@@ -51,20 +51,26 @@
 
         //4. Write a JavaScript program to find the most frequent item of an array.
 
-        let arrays = [1, 2, 3, 3, 3, 3, 4, 4, 5, 3];
+        let arrays = [1, 2, 3, 3, 3, 3, 4, 4, 5, 'r', 3, 'b', 'k', 5, 'k', 'k', 'k', 2, 'k'];
 
-        function FrequentNumber(frequentValue) {
-            // let frequentNewNumber = frequentValue.split("");
-            let getNumber = 0;
-            for (const item of frequentValue) {
-                if (item == 3) {
-                    getNumber++;
+        function frequentNumber(abd) {
+
+            let arrNew = abd.reduce((acc, cur) => {
+                if (acc[cur]) {
+                    acc[cur]++;
+                } else {
+                    acc[cur] = 1;
                 }
-            }
-            return getNumber;
+                return acc;
+            }, {}
+            )
+            let val = Object.values(arrNew);
+            let max = Math.max(...val);
+            let x = Object.keys(arrNew).filter(item => arrNew[item] == max);
+            return x;
         }
-
-        console.log(FrequentNumber(arrays));
+        let result = frequentNumber(arrays);
+        console.log(result);
 
         //5. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
 
