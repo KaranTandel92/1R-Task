@@ -14,12 +14,12 @@
         // 1. Write a JavaScript function that reverse a number
         // debugger
 
-        function reverse(number) {
-            number1 = number.toString();
-            return number1.split("").reverse().join("");
+        function reverse(number2) {
+            number3 = number2.toString();
+            return number3.split("").reverse().join("");
         }
-        number2 = reverse(3202);
-        console.log(Number(number2));
+        number = reverse(3202);
+        console.log(Number(number3));
 
         // 2. Write a JavaScript function that returns a passed string with letters in alphabetical order
         let strOne = "my name is karan tandel"
@@ -38,9 +38,13 @@
 
         function firstLetterCapital(orderCapital) {
             let x = strOne.split(" ");
-            let y = x.slice();
-            let z = y.indexOf();
-            return y;
+            let xone = [];
+            for (const iterator of x) {
+                xone.push(iterator.slice(0, 1).toUpperCase() + iterator.slice(1));
+            }
+            // let y = x.slice();
+            // let z = y.indexOf();
+            return xone.join(' ');
         }
 
         console.log(firstLetterCapital(strOne));
