@@ -54,3 +54,45 @@ now.addEventListener("click", function () {
 nicepic.addEventListener("error", function () {
     alert("The picture was not loaded");
 })
+
+let x = 10;
+let y = 20;
+
+function sum(a, b) {
+    return a + b;
+}
+
+console.log(sum(x, y));
+
+let a = 10;
+
+function m() {
+    let a = 100;
+    console.log(a);
+}
+
+function n() {
+    let a = 1000;
+    console.log(a);
+}
+
+m();
+n();
+console.log(a);
+
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let arr3 = [7, 8, 9];
+
+
+// spread operator 
+let arr4 = [...arr1, ...arr2, ...arr3];
+
+
+// rest operator 
+function check(...one) {
+    return one;
+}
+
+let just = check(arr4);
+console.log(just);

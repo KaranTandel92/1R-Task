@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+
+
+    <input type="number" placeholder="enter first value" id="num1">
+    <input type="number" placeholder="enter second value" id="num2">
+    <button class="btn" onclick="sum()">Click Me</button>
+    <div id="result"></div><br><br>
+
+    <div>
+        <input type="number" placeholder="enter 1st value" id="a">&nbsp; +
+        <input type="number" placeholder="enter 2nd value" id="b">
+        <button class="btn1" onclick="add()">Add Number</button>
+        <p>Sum = <input id="answer"></p>
+    </div>
+
+    <script>
+
+        function sum() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let a = parseInt(num1) + parseInt(num2);
+            document.getElementById("result").innerHTML = a;
+        }
+
+
+        function add() {
+            let a, b, sum;
+            a = parseInt(document.getElementById("a").value);
+            b = parseInt(document.getElementById("b").value);
+
+            sum = a + b;
+            document.getElementById("answer").value = sum;
+        }
+
+        a.addEventListener('focus', function () {
+            a.style.backgroundColor = "lightgray";
+        })
+
+        b.addEventListener('focus', function () {
+            b.style.backgroundColor = "lightgray";
+        })
+
+        answer.addEventListener('over', function () {
+            answer.style.color = "green";
+        })
+
+        let nums = [0, 2, 11, 15, 7, 7];
+
+        // function sumNumber(aOne) {
+        //     let array = aOne.slice(0, 2);
+        //     sum = 0;
+        //     for (i = 0; i < array.length; i++) {
+        //         sum += array[i]
+        //     }
+        //     return sum;
+        // }
+        function sumNumber(array, target) {
+            let temp = [];
+            // debugger
+            for (let i = 0; i < array.length; i++) {
+                for (let j = i + 1; j < array.length; j++) {
+                    if (array[i] + array[j] == target) {
+                        temp.push(i);
+                        temp.push(j);
+                        return temp;
+                    }
+
+                }
+            }
+        }
+
+        console.log(sumNumber(nums, 9));
+
+
+
+        let nums1 = [2, 11, 15, 7];
+
+        let array = nums1.slice(0, 2);
+
+        for (let index = 0; index < array.length; index++) {
+            console.log(index);
+        }
+
+
+
+        let number = [1, 2, 3, 5, 6, 8, 9, 1, 5, 6, 7, 8, 2, 4, 6, 9];
+
+        function mustName(num, firstTarget) {
+            let array1 = [];
+            for (let index = 0; index < num.length; index++) {
+                for (let item = 0; item < num.length; item++) {
+                    if (num[index] + num[item] == firstTarget) {
+                        array1.push(index);
+                        array1.push(item);
+                        return array1;
+                    }
+                }
+            }
+        }
+
+        let arrayNew = mustName(number, 9);
+        console.log(arrayNew);
+
+    </script>
+</body>
+
+</html>
