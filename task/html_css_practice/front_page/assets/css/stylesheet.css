@@ -1,0 +1,41 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* start : variables */
+
+
+
+/* end : variables */
+
+
+
+
+
+
+
+
+
+
+
+/* start : helper class */
+
+.d-flex {
+    display: flex;
+}
+
+.f-column {
+    flex-direction: column;
+}
+
+
+/* end : helper class */

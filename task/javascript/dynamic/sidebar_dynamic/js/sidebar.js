@@ -3,7 +3,10 @@ let sidemenu = [
     { Name: "Gmail", link: "https://www.gmail.com/" },
     { Name: "Dashboard", link: "www.dashboard.com" }
 ];
+
+
 let aside = document.createElement("aside");
+
 
 function generateSideBar(aside, sidemenu) {
     let ul = document.createElement("ul");
@@ -17,11 +20,10 @@ function generateSideBar(aside, sidemenu) {
         a.appendChild(text);
         a.setAttribute("href", iterator.link)
     }
-
 }
 
-generateSideBar(aside, sidemenu);
 
+generateSideBar(aside, sidemenu);
 let body = document.querySelector("body");
 
 
