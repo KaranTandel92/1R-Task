@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        fetch(" http://localhost:3000/posts")
+            .then((Response) =>
+                Response.json())
+            .then((data) =>
+                localStorage.setItem("data", JSON.stringify(data))
+            )
+
+        let getNew = localStorage.getItem("data");
+        let cnvrt = JSON.parse(getNew);
+
+
+
+        async function getData(url, data) {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            return response.json();
+        }
+        getData('http://localhost:3000/posts', { "Name": "Ronak" })
+            .then((data) => {
+                console.log(data);
+            });
+
+
+
+
+        let table = document.createElement("table");
+
+        function generateTableHeading(table, data) {
+            let thead = document.createElement("thead");
+            table.appendChild(thead);
+            let tr = document.createElement("tr");
+            thead.appendChild(tr);
+            for (const key in data[0]) {
+                let th = document.createElement("th");
+
+                let text = document.createTextNode(key);
+                th.appendChild(text);
+                tr.appendChild(th);
+            }
+        }
+
+        function generateTableBody(table, data) {
+            let tbody = document.createElement("tbody");
+            table.appendChild(tbody);
+            for (const element of data) {
+                let tr = document.createElement("tr");
+                tbody.appendChild(tr);
+                for (const key in element) {
+                    let td = document.createElement("td");
+                    let text = document.createTextNode(element[key]);
+                    td.appendChild(text);
+                    tr.appendChild(td);
+                }
+            }
+        }
+
+        generateTableHeading(table, cnvrt);
+        generateTableBody(table, cnvrt)
+        let body = document.querySelector("body");
+
+        body.appendChild(table)
+    </script>
+</body>
+
+</html>

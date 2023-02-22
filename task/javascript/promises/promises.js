@@ -24,3 +24,12 @@ let sum = (a, b) => {
 }
 
 setTimeout(sum, 3000, 5, 3);
+
+
+setTimeout(() => {
+    console.log("you go i will come after 3 second");
+}, 3000);
+
+setInterval(() => {
+    console.log("i will come in every 4 second");
+}, 4000);
