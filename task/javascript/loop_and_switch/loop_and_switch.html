@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //All leter reverse
+        let a = "My name is Karan";
+        let len = a.length;
+        for (i = len - 1; i >= 0; i--) {
+            document.write(a[i]);
+        }
+        document.write("<br>")
+
+        //Single word reverse
+        let b = a.split(" ");
+        console.log(b);
+
+        for (i = b.length - 1; i >= 0; i--) {
+            document.write(b[i] + " ");
+        }
+
+        document.write("<br>");
+
+        //Armstrong number
+        let num = 153;
+        let str = num.toString();
+        let len1 = str.length;
+        let sum = 0;
+
+        for (i = 0; i < len1; i++) {
+            let str1 = parseInt(str[i]);
+            sum = sum + Math.pow(str1, len1);
+        }
+        if (sum == num) {
+            document.write("is armstrong number");
+        }
+        else {
+            document.write("is not a armstrong number");
+        }
+
+        document.write("<br>");
+
+        //sum of arrray number
+        function sumOfAll(...array) {
+            let sum = 0;
+
+            for (let a of array)
+                sum += a;
+            return sum;
+        }
+        var arr = [2, 5, 0, 7, 4, 1, 3, 0, 2, 5, 0, 1, 3, 1];
+        document.write(sumOfAll(...arr) + "<br>")
+
+
+        //grade systme using switch
+        let grade = 75;
+
+        switch (true) {
+            case grade >= 90:
+                document.write("A Grade");
+                break;
+            case grade >= 80:
+                document.write("B Grade");
+                break;
+            case grade >= 70:
+                document.write("C Grade");
+                break;
+            case grade >= 60:
+                document.write("D Grade");
+            default:
+                document.write("F Grade");
+        }
+
+        document.write("<br>");
+
+        //Movie
+        // let movie = [{
+        //     name = "DJ";
+        //     director = "Yashraj";
+        //     alreadywatched = true
+        // },
+        // {
+        //     name = "Spiderman";
+        //     director = "silvestostelon";
+        //     alreadywatched = true
+        // },
+        // ]
+    </script>
+</body>
+
+</html>

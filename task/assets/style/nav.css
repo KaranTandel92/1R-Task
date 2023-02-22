@@ -1,0 +1,100 @@
+:root {
+    --bg-color: white;
+    --height: 50px;
+    --width: 50px;
+    --border-radius: 50%;
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #E0E0E0;
+}
+
+.head{
+    border-bottom: 2px solid white;
+}
+
+/* left side portion */
+.list {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    transform: translateY(-82px);
+}
+
+.link {
+    font-family: var(--font-family);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 5px;
+    color: #7D8FB3;
+}
+
+.main {
+    font-family: var(--font-family);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #4D5E80;
+    padding-left: 60px;
+    margin: 5px;
+}
+
+/* left portion end here */
+
+/* Give style of three icon */
+.icon {
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 25px;
+}
+
+.sideicon {
+    padding: 15px 18px;
+}
+
+/* icon style end here */
+
+.sidebar {
+    float: right;
+}
+
+.list2 {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    transform: translateY(-180px);
+}
+
+.clayton{
+    color:#6B7A99;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-family);
+    padding: 20px;
+    margin-top:auto;
+    transform: translateY(-185px);
+    margin-left: -2px;
+}
+
+.Notification-icon {
+    margin-left: 5px;
+}
+
+.cancel-icon {
+    margin-left: -25px;
+}
+
+.empty{
+    display: inline-block;
+    height:10px;
+    width:10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top:30px;
+    left:50px;
+}

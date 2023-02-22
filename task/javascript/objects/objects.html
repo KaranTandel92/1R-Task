@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <script>
+
+        // normal function
+        // function first(a, b) {
+        //     return a * b;
+        // }
+        // console.log(first(5, 2));
+
+        // arrow function
+        // let second = (x, y) => x + y;
+
+        // console.log(second(5, 2));
+
+        //  callback function
+
+        // function fourth() {
+        //     console.log(50 + 50);
+        // }
+
+        // function third(k, t, callback) {
+        //     console.log(k + t);
+        //     callback();
+        // }
+
+
+        // let k = 10;
+        // let t = 20;
+        // third(k, t, fourth);
+
+        // 1 to 10 number muliplication with 2
+
+        // for (i = 1; i <= 10; i++) {
+        //     console.log(`2 * ${i} = ${i * 2}`);
+        // }
+
+        // function one() {
+        //     let name = prompt("Enter you your name");
+        //     return name;
+        // }
+
+        // one();
+
+        // function two(a, b, c) {
+        //     console.log((a + b) + " " + c());
+        // }
+
+        // two(10, 20, one);
+
+        // function factorial(n) {
+        //     debugger
+        //     if (n == 1) {
+        //         return n;
+        //     }
+
+        //     else {
+        //         debugger
+        //         return n * factorial(n - 1);
+        //     }
+        // }
+
+        // console.log(factorial(5));
+
+        let obj = {
+
+            //OG
+            // setFname1: function (fname) {
+            //     this.firstName = fname;
+            // },
+            // setLname1: function (lname) {
+            //     this.lastname = lname;
+            // },
+            // fullName: function () {
+            //     return (obj.firstName + " " + this.lastname);
+            // },
+
+
+            //ES6
+            // set setFname2(ffname) {
+            //     this.firstName = ffname;
+            // },
+            // set setLname2(llname) {
+            //     this.lastname = llname;
+            // },
+            firstName: "Karan",
+            lastname: "Tandel",
+            set fullYouName(name) {
+                let a = name.split(" ");
+                try {
+                    if (a.length !== 2) {
+                        throw "Enter valid name"
+                    }
+                    else {
+                        this.firstName = a[0];
+                        this.lastname = a[1];
+                    }
+                } catch (error) {
+                    alert(error)
+                }
+
+            },
+            get fName() {
+                return ("My name is " + obj.firstName + " " + this.lastname);
+            }
+        }
+        //OG
+        // debugger
+        // obj.setFname1("viren");
+        // debugger
+        // obj.setLname1("patel");
+        // debugger
+        // console.log(obj.fullName());
+
+        //ES6
+        // obj.setFname2 = "viren";
+        // obj.setLname2 = "patel";
+        obj.fullYouName = "raj patel";
+
+        console.log(obj.fName);
+
+        let a = 10;
+
+        try {
+            if (a > 5) {
+                throw "number greater than 5";
+            } else {
+                throw "number less than 5 "
+            }
+        } catch (er) {
+            console.log(er);
+        }
+
+        let arr = [10, 8, 15, 0];
+        arr1 = arr.filter((num) => num >= 10)
+        console.log(arr1.length);
+
+        console.log(Math.floor(3.6));
+
+
+        function palindrom(x) {
+            let a = String(x);
+            let temp = "";
+            for (let index = a.length - 1; index >= 0; index--) {
+                temp += a[index];
+            }
+            if (Number(temp) == x) {
+                return true;
+            }
+            else {
+                return false
+            }
+        }
+        palindrom(151);
+
+
+
+    </script>
+</body>
+
+</html>

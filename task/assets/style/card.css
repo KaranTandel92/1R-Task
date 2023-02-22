@@ -1,0 +1,208 @@
+/* Variables */
+:root {
+    --dark-blue-20-bg-color: #1A2233;
+    --blue-gray-30-bg-color: #26334D;
+    --border-radius: 10px;
+    --white-color: #FFFFFF;
+    --font-family: sans-serif;
+    --circle-border-radius: 50%;
+    --icon-height: 60px;
+    --icon-width: 60px;
+    --large-font-size: 30px;
+    --small-font-size: 14px;
+    --small-font-color: #6B7A99;
+    --graph-section-border-color: #EDEFF2;
+    --graph-text-color: #4D5E80;
+    --live-bg-color: #8833ff1a;
+    --live-text-color: #8833FF;
+    --small-font-size-grpah: 12px;
+}
+
+/* End variables */
+
+/* universal selector */
+* {
+    font-family: var(--font-family);
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* end universal selector */
+
+/* 100% size given to full page */
+html,
+body {
+    height: 100%;
+    background-color: #E0E0E0;
+}
+
+.container {
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* first card start */
+/* main section */
+.main-container {
+    background-color: var(--dark-blue-20-bg-color);
+    width: 540px;
+    border-radius: var(--border-radius);
+    padding: 40px;
+}
+
+/* card heading portion */
+.card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bank-card {
+    color: var(--white-color);
+    font-size: 24px;
+}
+
+.circle-around-logo {
+    border-radius: var(--circle-border-radius);
+    height: var(--icon-height);
+    width: var(--icon-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-logo {
+    background-color: var(--blue-gray-30-bg-color);
+    border: 0;
+    cursor: pointer;
+}
+
+/* 1st flex box end here */
+
+/* start 2nd flex section  */
+
+.flex-bank-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.bank-symbol {
+    background-color: var(--white-color);
+}
+
+.usa-doller {
+    color: var(--white-color);
+    font-size: 36px;
+    margin-left: 36px;
+}
+
+/* End 2nd section */
+
+/* Start 3rd flex section */
+.flex-bank-amount {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    padding-top: 50px;
+}
+
+.flex-usa-bank {
+    display: flex;
+    flex-direction: row;
+}
+
+.current-balance {
+    color: var(--white-color);
+    font-size: var(--large-font-size);
+}
+
+.bank-type {
+    color: var(--small-font-color);
+    font-size: var(--small-font-size);
+}
+
+/* End 3rd section */
+
+.line {
+    padding-top: 50px;
+}
+
+/* end first card */
+
+/* start second card */
+
+.graph-container {
+    background-color: var(--white-color);
+    width: 270px;
+    /* padding: 30px 20px 20px 20px; */
+    border-radius: 10px;
+    margin-left: 143px;
+    margin-bottom: 204px;
+}
+
+.graph-heading {
+    font-size: var(--small-text-grpah);
+    font-weight: 700;
+    color: var(--small-font-color);
+}
+
+.chart-upper-part{
+    border-bottom: 2px solid black;
+    padding: 20px;
+}
+
+.graph-portion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.graph-output {
+    color: #4D5E80;
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+.final-graph {
+    padding-top: 7px;
+}
+
+.live-bar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.live-button {
+    width: 43px;
+    height: 30px;
+    background-color: var(--live-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: var(--small-text-grpah);
+    font-weight: 900;
+    border-radius: 5px;
+    color: #8833FF;
+}
+
+.for-visitor {
+    text-decoration: none;
+    font-size: var(--small-font-size-grpah);
+    font-weight: 700;
+    color: #6B7A99;
+}
+
+.live-portion-footer{
+    padding: 5px;
+}
+/* end second card */

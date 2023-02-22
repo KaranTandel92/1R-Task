@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+
+<body>
+    <script>
+        // today date
+        let todaydate = new Date;
+        document.write(todaydate.getDate() + "<br>");
+
+        // selected date
+        let december15 = new Date('15 December, 2022');
+        document.write(december15.toDateString() + "<br>");
+
+        // today
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let b = todaydate.getDay();
+        document.write("today is :" + days[b] + "<br>");
+
+        //current time
+        // let h = todaydate.getHours();
+        // let m = todaydate.getMinutes();
+        // let s = todaydate.getSeconds();
+
+        // (h > 12) ? document.write("current time is : " + (h - 12) + "PM : " + m + " : " + s + "<br>") : document.write("current time is :" + h + "AM : " + m + " : " + s + "<br>");
+
+        // square root
+        let a = 625;
+        document.write(Math.sqrt(a) + "<br>");
+
+        //max number
+        let x = Math.max(10, 20, 30, 50, 20);
+        document.write(x + "<br>");
+
+        //random number
+        let y = Math.random();
+        document.write(y + "<br>");
+
+        //value should be between 100 and 500
+        let num = 400;
+
+        if (num > 100 & num < 500) {
+            document.write("number is between the 100 and 500" + "<br>");
+        }
+        else {
+            document.write("number is not between the 100 and 500" + "<br>");
+        }
+
+        //false and true
+
+        function checkEquality(x, y) {
+            if (x === y) {
+                document.write("true" + "<br>");
+            }
+            else {
+                document.write("false" + "<br>");
+            }
+        }
+
+        checkEquality(0, "0")
+
+
+        checkEquality(1, 1)
+
+    </script>
+</body>
+
+</html>

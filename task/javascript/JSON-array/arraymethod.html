@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array_methods</title>
+</head>
+
+<body>
+    <script>
+        // 1.) array.at
+        let arr = [1, 24, 31, 4, 11, 5];
+        console.log(arr.sort());
+        console.log(arr.sort((a, b) => a - b));
+        let index = 2;
+        arr.copyWithin()
+
+        console.log(`use an index of ${index} the item returns is ${arr.at(index)}`);
+
+        // 2.) Concat 
+        let a = [1, 2, 3];
+        let b = [4, 5, 6];
+
+        console.log(a.concat(a, b, a));
+
+        // 3.) copywithin
+        let ar = ['a', 'b', 'c', 'd', 'e', 'f'];
+        console.log(ar.copyWithin(0, 3, 5));
+
+        // 4.) some and every
+        const array1 = [1, 31, 39, 29, 10, 13];
+        console.log(array1.some((currentValue) => currentValue >= 30));
+
+        // 5.) fill
+        const array2 = [4, 5, 1, 2, 3];
+        console.log(array2.fill(1, 3, 5));
+        // console.log(array2.fill(1, 5));
+        // console.log(array2.fill(4));
+
+        // 6.) Filter
+        const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+        const result = words.filter((value, index) => index > 1);
+        console.log(result);
+
+        // 7.) ForEach
+        // words.forEach((value, index, arr) => {
+        //     let obj = {
+        //         id: index, value: value, array: arr
+        //     }
+        //     console.log(obj);
+        // });
+
+        words.forEach((value, index) => {
+            console.log(value)
+        });
+
+
+        // 8.) filter
+        let h = [
+            {
+                city: 'valsad',
+                poppulation: 500000,
+                vehicle: 100000
+            },
+            {
+                city: 'navsari',
+                poppulation: 600000,
+                vehicle: 200000
+            },
+            {
+                city: 'surat',
+                poppulation: 700000,
+                vehicle: 300000
+            },
+            {
+                city: 'vadodra',
+                poppulation: 800000,
+                vehicle: 400000
+            }];
+        let human = h.filter((value, index) => value.vehicle > 200000);
+        console.log(human);
+
+        // 9.) find
+        let hm = [
+            {
+                city: 'valsad',
+                poppulation: 500000,
+                vehicle: 100000
+            },
+            {
+                city: 'navsari',
+                poppulation: 600000,
+                vehicle: 200000
+            },
+            {
+                city: 'surat',
+                poppulation: 700000,
+                vehicle: 300000
+            },
+            {
+                city: 'vadodra',
+                poppulation: 800000,
+                vehicle: 400000
+            }];
+        let human1 = h.find((value, index) => value.vehicle > 200000);
+        console.log(human1);
+
+        // 10.) Find
+        let wel = [5, 20, 25, 15, 7, 10];
+
+        let welcome = wel.find((value, index) => value > 15);
+        console.log(welcome);
+
+        // 11) findIndex
+        let welcome1 = wel.findIndex((value, index) => value > 15);
+        console.log(welcome1);
+
+        // 12) findLast
+        let welcome2 = wel.findLast((value, index) => value > 15);
+        console.log(welcome2);
+
+        // 13) findLastIndex
+        let welcome3 = wel.findLastIndex((value, index) => value > 15);
+        console.log(welcome3);
+
+        //14) Flat
+        const arr2 = [0, 1, 2, [[[3, 4]]]];
+        console.log(arr2.flat(1));
+
+        //15.) reduce
+        let one = [1, 2, 3, 4, 5];
+        let three = one.reduce((value, index) => index + value, 0);
+
+        console.log(three);
+
+    </script>
+
+</body>
+
+</html>

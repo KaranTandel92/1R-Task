@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json_and-array</title>
+</head>
+
+<body>
+    <h1>JSON ans array</h1>
+
+    <script>
+
+        //string to JSON
+        let obj = {
+            name: "Karan",
+            age: 30,
+            city: "Valsad"
+        }
+        let newobj = JSON.stringify(obj);
+        console.log(newobj);
+
+        //JSON to string 
+        newobj1 = JSON.parse(newobj);
+        console.log(newobj1);
+
+        //check two object value same 
+        let newobject = {
+            name: "Tayson",
+            age: 31,
+            city: "Valsad"
+        };
+        let newobject1 = {
+            name: "Tayson",
+            age: 31,
+            city: "Valsad"
+        }
+
+        console.log(newobject1 === newobject);
+        console.log(JSON.stringify(newobject1) === JSON.stringify(newobject));
+
+
+
+    </script>
+
+</body>
+
+</html>
