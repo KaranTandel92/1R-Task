@@ -22,17 +22,21 @@
 
 
 
-        async function getData(url, data) {
-            const response = await fetch(url, {
+        const API_URL = "http://localhost:3000/employeesData";
+
+        async function getData(API_URL, data) {
+            const response = await fetch(API_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
+
                 body: JSON.stringify(data)
             });
             return response.json();
         }
-        getData('http://localhost:3000/posts', { "Name": "Ronak" })
+        //function call
+        getData('http://localhost:3000/employeesData', { "Name": "Ronak" })
             .then((data) => {
                 console.log(data);
             });
@@ -40,6 +44,8 @@
 
 
 
+
+        // genrating table and data binding
         let table = document.createElement("table");
 
         function generateTableHeading(table, data) {

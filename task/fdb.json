@@ -1,0 +1,223 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "Name": "Ronak",
+      "id": 2
+    },
+    {
+      "Name": "Ronak",
+      "id": 3
+    },
+    {
+      "Name": "Ronak",
+      "id": 4
+    },
+    {
+      "Name": "Ronak",
+      "id": 5
+    },
+    {
+      "Name": "Ronak",
+      "id": 6
+    },
+    {
+      "Name": "Ronak",
+      "id": 7
+    },
+    {
+      "Name": "Ronak",
+      "id": 8
+    },
+    {
+      "Name": "Ronak",
+      "id": 9
+    },
+    {
+      "Name": "Ronak",
+      "id": 10
+    },
+    {
+      "Name": "Ronak",
+      "id": 11
+    },
+    {
+      "Name": "Ronak",
+      "id": 12
+    },
+    {
+      "Name": "Ronak",
+      "id": 13
+    },
+    {
+      "Name": "Ronak",
+      "id": 14
+    },
+    {
+      "Name": "Ronak",
+      "id": 15
+    },
+    {
+      "Name": "Ronak",
+      "id": 16
+    },
+    {
+      "Name": "Ronak",
+      "id": 17
+    },
+    {
+      "Name": "Ronak",
+      "id": 18
+    },
+    {
+      "Name": "Ronak",
+      "id": 19
+    },
+    {
+      "Name": "Ronak",
+      "id": 20
+    },
+    {
+      "Name": "Ronak",
+      "id": 21
+    },
+    {
+      "Name": "Ronak",
+      "id": 22
+    },
+    {
+      "Name": "Ronak",
+      "id": 23
+    },
+    {
+      "Name": "Ronak",
+      "id": 24
+    },
+    {
+      "Name": "Ronak",
+      "id": 25
+    },
+    {
+      "Name": "Ronak",
+      "id": 26
+    },
+    {
+      "Name": "Ronak",
+      "id": 27
+    },
+    {
+      "Name": "Ronak",
+      "id": 28
+    },
+    {
+      "Name": "Ronak",
+      "id": 29
+    },
+    {
+      "Name": "Ronak",
+      "id": 30
+    },
+    {
+      "Name": "Ronak",
+      "id": 31
+    },
+    {
+      "Name": "Ronak",
+      "id": 32
+    },
+    {
+      "Name": "Ronak",
+      "id": 33
+    },
+    {
+      "Name": "Ronak",
+      "id": 34
+    },
+    {
+      "Name": "Ronak",
+      "id": 35
+    },
+    {
+      "Name": "Ronak",
+      "id": 36
+    },
+    {
+      "Name": "Ronak",
+      "id": 37
+    },
+    {
+      "Name": "Ronak",
+      "id": 38
+    },
+    {
+      "Name": "Ronak",
+      "id": 39
+    },
+    {
+      "Name": "Ronak",
+      "id": 40
+    },
+    {
+      "Name": "Ronak",
+      "id": 41
+    },
+    {
+      "Name": "Ronak",
+      "id": 42
+    },
+    {
+      "Name": "Ronak",
+      "id": 43
+    },
+    {
+      "Name": "Ronak",
+      "id": 44
+    },
+    {
+      "Name": "Ronak",
+      "id": 45
+    },
+    {
+      "Name": "Ronak",
+      "id": 46
+    },
+    {
+      "Name": "Ronak",
+      "id": 47
+    },
+    {
+      "Name": "Ronak",
+      "id": 48
+    },
+    {
+      "Name": "Ronak",
+      "id": 49
+    },
+    {
+      "Name": "Ronak",
+      "id": 50
+    },
+    {
+      "Name": "Ronak",
+      "id": 51
+    },
+    {
+      "Name": "Ronak",
+      "id": 52
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

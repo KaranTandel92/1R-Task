@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "newEmployee": [
+    {
+      "first": "vcvcxv",
+      "tech": "xdvxcvccv",
+      "id": 2
+    },
+    {
+      "first": "scscs",
+      "tech": "scscs",
+      "id": 3
+    },
+    {
+      "first": "gdhthb",
+      "tech": "hfgnfgnyg",
+      "id": 4
+    },
+    {
+      "fullname": "gg",
+      "technology": "bhhtb",
+      "id": 5
+    },
+    {
+      "fullname": "karan",
+      "technology": "bhhtb",
+      "id": 6
+    }
+  ]
+}
