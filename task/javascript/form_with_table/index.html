@@ -6,17 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form_with_table</title>
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
 </head>
 
 <body>
     <form id="form">
-        <label for="first">Full Name :</label>
-        <input type="text" id="first" name="fullname"><br><br>
-        <label for="tech">Technologie :</label>
-        <input type="text" id="tech" name="technology"><br><br>
+        <div>
+            <label for="first">Full Name :</label>
+            <input type="text" id="firstname" name="fullname">
+        </div>
+        <div>
+            <label for="tech">Technologie :</label>
+            <input type="text" id="tech" name="technology">
+        </div>
         <button type="submit">Save Employee</button>
-        <button>Update Employee</button>
-    </form>
+    </form><br>
+    <button id="updatebutton">Update Employee</button>
 
     <script src="./assets/js/table.js"></script>
 </body>

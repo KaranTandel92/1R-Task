@@ -18,28 +18,28 @@
   },
   "newEmployee": [
     {
-      "first": "vcvcxv",
-      "tech": "xdvxcvccv",
+      "fullname": "Ronak",
+      "technology": "Full stack developer",
       "id": 2
     },
     {
-      "first": "scscs",
-      "tech": "scscs",
+      "fullname": "Viren",
+      "technology": "Frontend",
       "id": 3
     },
     {
-      "first": "gdhthb",
-      "tech": "hfgnfgnyg",
+      "fullname": "Hiren",
+      "technology": "Full stack developer",
       "id": 4
     },
     {
-      "fullname": "gg",
-      "technology": "bhhtb",
+      "fullname": "Raj",
+      "technology": ".NET",
       "id": 5
     },
     {
-      "fullname": "karan",
-      "technology": "bhhtb",
+      "fullname": "Karan",
+      "technology": "Frontend",
       "id": 6
     }
   ]

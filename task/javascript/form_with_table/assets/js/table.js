@@ -1,30 +1,29 @@
-let data = [
-    { id: 1, Name: "Karan", technology: "front-end-develeoper", action: "" },
-    { id: 2, Name: "Ronak", technology: "full-stack-developer", action: "" },
-    { id: 3, Name: "Viren", technology: "ui-developer", action: "" },
-    { id: 4, Name: "Raj", technology: "front-end-develeoper", action: "" },
-];
+let data =
+    { id: "ID", name: "NAME", technology: "TECHNOLOGY", action: "ACTION" };
 
 let formfirst = document.getElementById("form");
 formfirst.addEventListener("submit", (event) => {
     event.preventDefault();
-    let getData = new FormData(form) // get data from the form
-    let dataconvert = Object.fromEntries(getData.entries()); // convert it from array to object
-    let dataStr = JSON.stringify(dataconvert);
+    let fullname = document.getElementById("firstname");
+    let technology = document.getElementById("tech");
     // console.log(s);
     let dataPost = {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
         },
-        body: dataStr,
+        body: JSON.stringify({
+            fullname: fullname.value,
+            technology: technology.value
+        }
+        ),
     }
     fetch("http://localhost:3000/newEmployee", dataPost)
         .then((response) => (response.json()))
-        .then(data => console.log(data));
-    return dataStr;
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+    // return dataStr;
 });
-
 
 //create a table
 let table = document.createElement("table");
@@ -36,35 +35,31 @@ function createTableHeading(table, data) {
     table.appendChild(thead);
     let tr = document.createElement("tr");
     thead.appendChild(tr);
-    for (const key in data[0]) {
+    for (const key in data) {
         let th = document.createElement("th");
-        let text = document.createTextNode(key);
+        let text = document.createTextNode(data[key]);
         th.appendChild(text);
         tr.appendChild(th);
     }
 }
+createTableHeading(table, data);
 // //end table heading
 
 // //make table body
-function createTableBody(table, data) {
+fetch("http://localhost:3000/newEmployee").then(response => response.json()).then(data => {
     let tbody = document.createElement("tbody");
     table.appendChild(tbody);
     for (const element of data) {
         let tr = document.createElement("tr");
         tbody.appendChild(tr);
-        // for (const value in element) {
-        //     let td = document.createElement("td");
-        //     let text = document.createTextNode(element[value]);
-        //     td.appendChild(text);
-        //     tr.appendChild(td);
-        // }
+
         let td1 = document.createElement("td");
         let td1Text = document.createTextNode(element["id"]);
         td1.appendChild(td1Text);
         tr.appendChild(td1);
 
         let td2 = document.createElement("td");
-        let td2Text = document.createTextNode(element["Name"]);
+        let td2Text = document.createTextNode(element["fullname"]);
         td2.appendChild(td2Text);
         tr.appendChild(td2);
 
@@ -73,25 +68,60 @@ function createTableBody(table, data) {
         td3.appendChild(td3Text);
         tr.appendChild(td3);
 
+        // create delete button
         let td4 = document.createElement("td");
-        let btn1 = document.createElement("button");
-        let btn1Text = document.createTextNode("Delete");
-        btn1.appendChild(btn1Text);
-        td4.appendChild(btn1);
+        let deleteButton = document.createElement("button");
+        let deleteText = document.createTextNode("Delete");
+        deleteButton.appendChild(deleteText);
+        deleteButton.addEventListener("click", e => {
+            fetch(`http://localhost:3000/newEmployee/${element["id"]}`, { method: "DELETE" }) // data delete from the json server (or data base)
+            // .catch(err => console.log(err));
+            e.preventDefault();
+            table.deleteRow(tr.rowIndex); // row delete from the table
+        })
+        td4.appendChild(deleteButton);
         tr.appendChild(td4);
 
+        // create edit button
         let td5 = document.createElement("td");
-        let btn2 = document.createElement("button");
-        let btn2Text = document.createTextNode("Edit");
-        btn2.appendChild(btn2Text);
-        td5.appendChild(btn2);
+        let editButton = document.createElement("button");
+        let editText = document.createTextNode("Edit");
+        editButton.appendChild(editText);
+        editButton.addEventListener("click", (e) => {
+            rowEdit(element)
+        });
+        td5.appendChild(editButton);
         tr.appendChild(td5);
     }
-}
+}).catch(err => console.log(err))
 //end table body
 
-createTableHeading(table, data);
-createTableBody(table, data);
+let updateButton = document.getElementById("updatebutton");
+
+function rowEdit(element) {
+    let fullname = document.getElementById("firstname");
+    let technology = document.getElementById("tech");
+    fullname.value = element.fullname;
+    technology.value = element.technology;
+
+    // event given on edit button
+    updateButton.addEventListener("click", (e) => {
+        let editData = {
+            fullname: fullname.value,
+            technology: technology.value
+        }
+        // console.log(element.id);
+        fetch(`http://localhost:3000/newEmployee/${element.id}`, { // element.id : it will give edit the specific data
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(editData),
+        })
+            .then((response) => (response.json()))
+            .then(data => console.log(data))
+    })
+};
 
 let body = document.querySelector("body");
 body.appendChild(table);
