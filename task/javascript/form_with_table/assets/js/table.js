@@ -43,9 +43,9 @@ function createTableHeading(table, data) {
     }
 }
 createTableHeading(table, data);
-// //end table heading
+// end table heading
 
-// //make table body
+// make table body
 fetch("http://localhost:3000/newEmployee").then(response => response.json()).then(data => {
     let tbody = document.createElement("tbody");
     table.appendChild(tbody);

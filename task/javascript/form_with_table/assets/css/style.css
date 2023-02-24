@@ -5,11 +5,50 @@ body {
 }
 
 /* universal selector */
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 /* end : universal selector */
+
+
+.first-input,
+.second-input {
+    margin: 20px;
+}
+
+.second-input {}
+
+
+
+.name-input,
+.name-domain {
+    padding: 10px;
+}
+
+.first-name,
+.tech-name {
+    padding-bottom: 5px;
+}
+
+
+
+
+/* start : helper classes */
+
+.d-flex {
+    display: flex;
+}
+
+.f-column {
+    flex-direction: column;
+}
+
+.b-radius-5 {
+    border-radius: 5px;
+}
+
+/* end : helper classes */
