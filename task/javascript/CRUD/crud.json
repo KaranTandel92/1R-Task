@@ -1,0 +1,57 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employee": [
+    {
+      "onlyName": "ref",
+      "lastName": "erfe",
+      "technology": "erferf",
+      "id": 1
+    },
+    {
+      "onlyName": "dfgdfg",
+      "lastName": "dfgfdgd",
+      "technology": "dfgdfgfd",
+      "id": 2
+    },
+    {
+      "onlyName": "erferfre",
+      "lastName": "erfer",
+      "technology": "erferfre",
+      "id": 3
+    },
+    {
+      "onlyName": "r43ref",
+      "lastName": "erfer",
+      "technology": "erferfre",
+      "id": 4
+    },
+    {
+      "onlyName": "trgtr",
+      "lastName": "rtgrtg",
+      "technology": "trgrtgrt",
+      "id": 5
+    },
+    {
+      "onlyName": "ewdscs",
+      "lastName": "fwefsef",
+      "technology": "ewfdss",
+      "id": 6
+    }
+  ]
+}

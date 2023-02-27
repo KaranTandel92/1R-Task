@@ -41,6 +41,11 @@
       "fullname": "Karan",
       "technology": "Frontend",
       "id": 6
+    },
+    {
+      "fullname": "Chintan",
+      "technology": "Mobile",
+      "id": 7
     }
   ]
 }
