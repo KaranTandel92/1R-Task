@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex_card</title>
+</head>
+
+<body>
+    <form>
+        <label for="firstName">First Name :</label><br>
+        <input type="text" id="firstName" placeholder="Ex : Karan (first letter should be capital)"><br><br>
+
+        <label for="lastName">Last Name :</label><br>
+        <input type="text" id="lastName" placeholder="Ex : Tandel (first letter should be capital)"><br><br>
+
+        <label for="phoneNumber">Phone Number :</label><br>
+        <input type="number" name="phone" id="phoneNumber" placeholder="Number only"><br><br>
+
+        <label for="">Email :</label><br>
+        <input type="text" id="email" placeholder="email"><br><br>
+
+        <label for="">Password :</label><br>
+        <input type="text" id="password" name="password" placeholder="Enter passwaord"><br><br>
+
+        <label for="Salary">Salary :</label><br>
+        <input type="text"><br><br>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+<script>
+
+    let firstName = document.getElementById("firstName");
+    let lastName = document.getElementById("lastName");
+    let phone = document.getElementById("phoneNumber");
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+
+    let submit = document.getElementById("submit");
+
+    submit.addEventListener("click", (e) => {
+        e.preventDefault();
+        //first name
+        if (/[A-Z]{1}[a-z]{2,50}/.test(firstName.value)) {
+            console.log(firstName.value);
+        }
+        else {
+            alert("Enter Valid first name")
+        }
+        //end first name
+
+        //last name
+        if (/[A-Z]{1}[a-z]{2,50}/.test(lastName.value)) {
+            console.log(lastName.value);
+        }
+        else {
+            alert("Enter Valid last name")
+        }
+        //end last name
+
+        //phone number
+        if (/[89][0-9]{9}/.test(phone.value)) {
+            console.log(phone.value);
+        }
+        else {
+            alert("Phone number is should be start with 8 or 9 number only");
+        }
+        //end phone number
+
+        //eamil address
+        if (/^[A-Za-z0-9._%+-]+@(?!1Rivet.com)[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/.test(email.value)) {
+            console.log(email.value);
+        }
+        else {
+            alert("Enter valid mail id");
+        }
+        //end email address
+
+        //passwaord
+        if (!/^[A-Za-z0-9.\@#%$*-_]{6,16}/.test(password.value)) {
+            alert("Password length shold be 6 to 16 character");
+        }
+        else if (password.value.length <= 16) {
+            alert("Password length shold be 6 to 16 character");
+        }
+        else {
+            console.log(password.value);
+        }
+        //end password
+    })
+
+
+
+
+</script>
+
+</html>

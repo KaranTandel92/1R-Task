@@ -22,7 +22,7 @@ submitButton.addEventListener("click", (e) => {
         .then(data => console.log(data));
 });
 
-let header = { id: "ID", first_name: "FIRST NAME", last_name: "LAST NAME", technology: "TECHNOLOGY" };
+let header = { id: "ID", onlyName: "FIRST NAME", lastName: "LAST NAME", technology: "TECHNOLOGY" };
 
 //create a table
 let mainDiv = document.createElement("div");
@@ -81,11 +81,18 @@ function tableBodyCreate(table) {
             }
             let deleteButton = document.createElement("button");
             let deleteText = document.createTextNode("Delete");
+            deleteButton.addEventListener("click", e => {
+                fetch(`http://localhost:3000/employee/${element["id"]}`, { method: "DELETE" })
+                table.deleteRow(tr.rowIndex);
+            })
             deleteButton.appendChild(deleteText);
             tr.appendChild(deleteButton);
 
             let editButton = document.createElement("button");
             let editText = document.createTextNode("Edit");
+            editButton.addEventListener("click", e => {
+                rowEdit(element)
+            })
             editButton.appendChild(editText);
             tr.appendChild(editButton);
         }
@@ -94,5 +101,34 @@ function tableBodyCreate(table) {
 }
 tableBodyCreate(table);
 // end : table body
+let updateButton = document.querySelector(".updateButton")
+
+function rowEdit(element) {
+    let onlyName = document.getElementById("first");
+    let lastName = document.getElementById("last");
+    let technology = document.getElementById("tech");
+    onlyName.value = element.onlyName;
+    lastName.value = element.lastName;
+    technology.value = element.technology;
+
+    updateButton.addEventListener("click", e => {
+        let editData = {
+            onlyName: onlyName.value,
+            lastName: lastName.value,
+            technology: technology.value,
+        }
+        // data edit
+        fetch(`http://localhost:3000/employee/${element.id}`, {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(editData),
+        })
+            .then((response) => (response.json()))
+            .then(data => console.log(data));
+    })
+}
+
 let body = document.querySelector("body");
 body.appendChild(mainDiv);

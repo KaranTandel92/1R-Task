@@ -18,40 +18,70 @@
   },
   "employee": [
     {
-      "onlyName": "ref",
-      "lastName": "erfe",
-      "technology": "erferf",
+      "onlyName": "Ronak",
+      "lastName": "Patel",
+      "technology": "Fullstack developer",
       "id": 1
     },
     {
-      "onlyName": "dfgdfg",
-      "lastName": "dfgfdgd",
-      "technology": "dfgdfgfd",
+      "onlyName": "Karan",
+      "lastName": "Tandel",
+      "technology": "Frontend",
       "id": 2
     },
     {
-      "onlyName": "erferfre",
-      "lastName": "erfer",
-      "technology": "erferfre",
+      "onlyName": "Viren",
+      "lastName": "Patel",
+      "technology": "Frontend",
       "id": 3
     },
     {
-      "onlyName": "r43ref",
-      "lastName": "erfer",
-      "technology": "erferfre",
+      "onlyName": "Chintan",
+      "lastName": "Lad",
+      "technology": ".NET",
       "id": 4
     },
     {
-      "onlyName": "trgtr",
-      "lastName": "rtgrtg",
-      "technology": "trgrtgrt",
+      "onlyName": "Hiren",
+      "lastName": "Tandel",
+      "technology": "Fullstack developer",
       "id": 5
     },
     {
-      "onlyName": "ewdscs",
-      "lastName": "fwefsef",
-      "technology": "ewfdss",
+      "onlyName": "Ronak",
+      "lastName": "Patel",
+      "technology": "Fullstack developer",
       "id": 6
+    },
+    {
+      "onlyName": "Karan",
+      "lastName": "Tandel",
+      "technology": "Frontend",
+      "id": 7
+    },
+    {
+      "onlyName": "Viren",
+      "lastName": "Patel",
+      "technology": "Frontend",
+      "id": 8
+    },
+    {
+      "onlyName": "Chintan",
+      "lastName": "Lad",
+      "technology": ".NET",
+      "id": 9
+    },
+    {
+      "onlyName": "Hiren",
+      "lastName": "Tandel",
+      "technology": "Fullstack developer",
+      "id": 10
+    },
+    {
+      "onlyName": "Raj",
+      "lastName": "Patel",
+      "technology": "Frontend",
+      "id": 11
     }
   ]
 }

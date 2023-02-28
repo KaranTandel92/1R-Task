@@ -6,20 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form-create,read,update & delete</title>
+    <link rel="stylesheet" href="./css/crud.css">
 </head>
 
 <body>
     <div>
-        <form class="form">
-            <label for="first">First Name :</label>
-            <input type="text" name="onlyName" id="first">
-            <label for="last">Last Name :</label>
-            <input type="text" name="lastName" id="last">
-            <label for="tech">Technology :</label>
-            <input type="text" name="technology" id="tech">
-            <div>
+        <form class="form d-flex f-column">
+            <label for="first" class="name">First Name :</label>
+            <input type="text" name="onlyName" id="first" class="textType" placeholder="Enter name only">
+            <label for="last" class="name">Last Name :</label>
+            <input type="text" name="lastName" id="last" class="textType" placeholder="Last name only">
+            <label for="tech" class="name">Technology :</label>
+            <input type="text" name="technology" id="tech" class="textType" placeholder="Enter your domain">
+            <div class="button_section">
                 <button type="submit" class="submit">Submit Data</button>
-                <button>Update Employee</button>
+                <button class="updateButton">Update Employee</button>
             </div>
         </form>
     </div>
