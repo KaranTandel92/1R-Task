@@ -6,30 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regex_card</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <form>
-        <label for="firstName">First Name :</label><br>
-        <input type="text" id="firstName" placeholder="Ex : Karan (first letter should be capital)"><br><br>
+    <div class="main-container d-flex">
+        <form class="form d-flex f-column">
+            <div class="user-name d-flex f-column align-center">
+                <label for="firstName" class="type-name">First Name :</label>
+                <input type="text" id="firstName"
+                    class="padding-7 width-350 border-0-3 border border-r-4 margin-top-3 margin-bottom-8"
+                    placeholder="Ex : Karan (first letter should be capital)">
+            </div>
 
-        <label for="lastName">Last Name :</label><br>
-        <input type="text" id="lastName" placeholder="Ex : Tandel (first letter should be capital)"><br><br>
+            <div class="user-name d-flex f-column align-center">
+                <label for="lastName">Last Name :</label>
+                <input type="text" id="lastName"
+                    class="padding-7 width-350 border-0-3 border border-r-4 margin-top-3 margin-bottom-8"
+                    placeholder="Ex : Tandel (first letter should be capital)">
+            </div>
 
-        <label for="phoneNumber">Phone Number :</label><br>
-        <input type="number" name="phone" id="phoneNumber" placeholder="Number only"><br><br>
+            <div class="user-name d-flex f-column align-center">
+                <label for="phoneNumber">Phone Number :</label>
+                <input type="text" name="phone"
+                    class="contact-number padding-7 width-350 border-0-3 border border-r-4 margin-top-3 margin-bottom-8"
+                    id="phoneNumber" placeholder="Number only">
+            </div>
 
-        <label for="">Email :</label><br>
-        <input type="text" id="email" placeholder="email"><br><br>
+            <div class="user-name d-flex f-column align-center">
+                <label for="">Email :</label>
+                <input type="text" id="email"
+                    class="padding-7 width-350 border border-0-3 border-r-4 margin-top-3 margin-bottom-8"
+                    placeholder="email">
+            </div>
 
-        <label for="">Password :</label><br>
-        <input type="text" id="password" name="password" placeholder="Enter passwaord"><br><br>
+            <div class="user-name d-flex f-column align-center">
+                <label for="">Password :</label>
+                <input type="text" id="password"
+                    class="padding-7 width-350 border-0-3 border border-r-4 margin-top-3 margin-bottom-8"
+                    name="password" placeholder="Enter passwaord">
+            </div>
 
-        <label for="Salary">Salary :</label><br>
-        <input type="text"><br><br>
+            <div class="user-name d-flex f-column align-center">
+                <label for="Salary">Salary :</label>
+                <input type="text" id="salary"
+                    class="padding-7 width-350 border-0-3 border border-r-4 margin-top-3 margin-bottom-8">
+            </div>
 
-        <button type="submit" id="submit">Submit</button>
-    </form>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
 </body>
 <script>
 
@@ -38,6 +64,7 @@
     let phone = document.getElementById("phoneNumber");
     let email = document.getElementById("email");
     let password = document.getElementById("password");
+    let salary = document.getElementById("salary");
 
     let submit = document.getElementById("submit");
 
@@ -65,13 +92,16 @@
         if (/[89][0-9]{9}/.test(phone.value)) {
             console.log(phone.value);
         }
+        else if (phone.value) {
+            alert("Number only")
+        }
         else {
             alert("Phone number is should be start with 8 or 9 number only");
         }
         //end phone number
 
         //eamil address
-        if (/^[A-Za-z0-9._%+-]+@(?!1Rivet.com)[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/.test(email.value)) {
+        if (/^[A-Za-z0-9._%+-]+@(?!1Rivet.com)[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$/.test(email.value)) {
             console.log(email.value);
         }
         else {
@@ -80,8 +110,11 @@
         //end email address
 
         //passwaord
-        if (!/^[A-Za-z0-9.\@#%$*-_]{6,16}/.test(password.value)) {
-            alert("Password length shold be 6 to 16 character");
+        let minNumber = 6;
+        let maxNumber = 16;
+        let reg = /[A-Za-z0-9.\@#%$*-_]{6,16}/;
+        if (reg.length < minNumber || reg.length > maxNumber) {
+            console.log(reg);
         }
         else if (password.value.length <= 16) {
             alert("Password length shold be 6 to 16 character");
@@ -91,8 +124,6 @@
         }
         //end password
     })
-
-
 
 
 </script>
