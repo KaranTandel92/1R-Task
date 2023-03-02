@@ -27,6 +27,11 @@ body {
     padding: 10px;
 }
 
+.searchbar {
+    padding: 10px;
+    margin: 20px;
+}
+
 .first-name,
 .tech-name {
     padding-bottom: 5px;

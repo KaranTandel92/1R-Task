@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "newRegex": [
+    {
+      "firstName": "Karan",
+      "lastName": "Tandel",
+      "phone": "9998539134",
+      "email": "hiren_tandel1217@gmail.com",
+      "anotherEmail": "hiren.tandel858@1Rivet.com",
+      "password": "Karan_1234567891123",
+      "salary": "10000",
+      "id": 1
+    },
+    {
+      "firstName": "Karan",
+      "lastName": "Tandel",
+      "phone": "9998539134",
+      "email": "hiren_tandel1217@gmail.com",
+      "anotherEmail": "hiren.tandel858@1Rivet.com",
+      "password": "Karan_1234567891123",
+      "salary": "10000",
+      "id": 2
+    }
+  ]
+}

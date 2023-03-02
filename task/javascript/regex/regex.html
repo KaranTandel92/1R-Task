@@ -12,62 +12,41 @@
 <body>
     <div class="main-container d-flex">
         <form class="form d-flex f-column">
-            <div class="user-name d-flex f-column align-center">
-                <label for="firstName" class="type-name">First Name :</label>
-                <input type="text" id="firstName"
-                    class="padding-7 width-350 border-0-3 border border-r-4 margin-top-3 margin-bottom-8"
-                    placeholder="Ex : Karan (first letter should be capital)">
-                <span id="user-error"></span>
+            <div class="user d-flex f-column">
+                <label for="firstName">First Name :</label>
+                <input type="text" id="firstName" placeholder="Enter first name">
+                <span id="userError"></span>
             </div>
-
-            <div class="user-name d-flex f-column align-center">
+            <div class="user d-flex f-column align-center">
                 <label for="lastName">Last Name :</label>
-                <input type="text" id="lastName"
-                    class="padding-7 width-350 border-0-3 border border-r-4 margin-top-3 margin-bottom-8"
-                    placeholder="Ex : Tandel (first letter should be capital)">
-                <span id="last-name-error"></span>
+                <input type="text" id="lastName" placeholder="Enter last name">
+                <span id="lastNameError"></span>
             </div>
-
-            <div class="user-name d-flex f-column align-center">
+            <div class="user d-flex f-column align-center">
                 <label for="phoneNumber">Phone Number :</label>
-                <input type="text" name="phone"
-                    class="contact-number padding-7 width-350 border-0-3 border border-r-4 margin-top-3 margin-bottom-8"
-                    id="phoneNumber" placeholder="Number only">
-                <span id="mobile-number"></span>
+                <input type="text" name="phone" id="phoneNumber" placeholder="Number only">
+                <span id="mobileNumber"></span>
             </div>
-
-            <div class="user-name d-flex f-column align-center">
+            <div class="user d-flex f-column align-center">
                 <label for="email">Email :</label>
-                <input type="text" id="email"
-                    class="padding-7 width-350 border border-0-3 border-r-4 margin-top-3 margin-bottom-8"
-                    placeholder="email">
-                <span id="email-address"></span>
+                <input type="text" id="email" placeholder="email">
+                <span id="emailAddress"></span>
             </div>
-
-            <div class="user-name d-flex f-column align-center">
+            <div class="user d-flex f-column align-center">
                 <label for="anotherEmail">Organization Email :</label>
-                <input type="text" id="anotherEmail"
-                    class="padding-7 width-350 border border-0-3 border-r-4 margin-top-3 margin-bottom-8"
-                    placeholder="email">
-                <span id="another-email-address"></span>
+                <input type="text" id="anotherEmail" placeholder="email">
+                <span id="anotherEmailAddress"></span>
             </div>
-
-            <div class="user-name d-flex f-column align-center">
+            <div class="user d-flex f-column align-center">
                 <label for="password">Password :</label>
-                <input type="password" id="password"
-                    class="padding-7 width-350 border-0-3 border border-r-4 margin-top-3 margin-bottom-8"
-                    name="password" placeholder="Enter passwaord">
-                <span></span>
+                <input type="text" id="password" name="password" placeholder="Enter passwaord">
+                <span id="userPassword"></span>
             </div>
-
-            <div class="user-name d-flex f-column align-center">
+            <div class="user d-flex f-column align-center">
                 <label for="salary">Salary :</label>
-                <input type="text" id="salary"
-                    class="padding-7 width-350 border-0-3 border border-r-4 margin-top-3 margin-bottom-8"
-                    placeholder="Enter amount">
-                <span class="user-salary"></span>
+                <input type="text" id="salary" placeholder="Enter amount">
+                <span id="userSalary"></span>
             </div>
-
             <button type="submit" id="submit">Submit</button>
         </form>
     </div>
