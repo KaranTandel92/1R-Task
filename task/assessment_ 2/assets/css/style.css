@@ -177,6 +177,11 @@ table td {
     text-align: center;
 }
 
+th,
+td {
+    padding-left: 20px;
+}
+
 tr:nth-child(even) {
     background: #EBF0FA;
     height: 64px;
@@ -204,6 +209,7 @@ tr:nth-child(odd) {
     justify-content: center;
     align-content: center;
 }
+
 
 /* end : table style */
 
