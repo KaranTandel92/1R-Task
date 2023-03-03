@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div>
+        <section class="formSection">
+            <!-- start : header -->
+            <header class="formHead d-flex justify-space-between">
+                <button class="filterButton d-flex"><img src="./assets/images/filter_icon.png" alt="filter-icon"
+                        class="filterImg">
+                    Status</button>
+                <button class="addButton">+ &nbsp&nbspAdd customer</button>
+            </header>
+            <!-- end : header -->
+            <div>
+                <!-- start : form -->
+                <form id="form">
+                    <div class="formFirstSection d-flex justify-space-between">
+                        <div class="d-flex f-column flex-1 margin-bottom-20">
+                            <label for="" class="headingName">Name</label>
+                            <input type="text" placeholder="Enter Name" id="userName" class="dataBox" name="name">
+                            <span id="userError"></span>
+                        </div>
+                        <div class="d-flex f-column flex-1 margin-bottom-20">
+                            <label for="" class="headingName">DESCRIPTION</label>
+                            <input type="text" placeholder="Enter Description" id="writeDescription" class="dataBox"
+                                name="description">
+                            <span id="descriptionError"></span>
+                        </div>
+                        <div class="d-flex f-column flex-1 margin-bottom-20">
+                            <label for="" class="headingName">STATUS</label>
+                            <select name="selectOption" id="dataStatus" class="dataBox">
+                                <option value="Open" class="selectStatus">Select Status</option>
+                                <option value="Open">Open</option>
+                                <option value="Error">Error</option>
+                                <option value="Success">Success</option>
+                                <option value="Inactive">Inactive</option>
+                            </select>
+                            <span id="optionError"></span>
+                        </div>
+                    </div>
+                    <div class="formSecondSection d-flex justify-space-between">
+                        <div class="d-flex f-column flex-1 margin-bottom-13">
+                            <label for="" class="headingName">RATE</label>
+                            <input type="text" placeholder="Enter Rate" class="dataBox" id="writeRate" name="rate">
+                            <span id="rateError"></span>
+                        </div>
+                        <div class="d-flex f-column flex-1 margin-bottom-13">
+                            <label for="" class="headingName">BALANCE</label>
+                            <input type="text" placeholder="Enter Balance" class="dataBox" id="checkBalance"
+                                name="balance">
+                            <span id="balanceError"></span>
+                        </div>
+                        <div class="d-flex f-column flex-1 margin-bottom-13">
+                            <label for="" class="headingName">DEPOSITE</label>
+                            <input type="text" placeholder="Enter Deposit" class="dataBox" id="userDeposite"
+                                name="deposit">
+                            <span id="depositError"></span>
+                        </div>
+                    </div>
+                    <div class="dataUpdateButton d-flex justify-end">
+                        <button class="cancelButton">Cancel</button>
+                        <button class="saveButton">Save</button>
+                        <button class="updateButton">Update Data</button>
+                    </div>
+                </form>
+                <!-- end : form -->
+            </div>
+        </section>
+        <section class="tableSection">
+            <!-- start : table -->
+            <table id="table"></table>
+            <!-- end : table -->
+        </section>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

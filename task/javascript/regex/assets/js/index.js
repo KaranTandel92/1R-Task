@@ -172,7 +172,7 @@ function mainData() {
         let password = document.getElementById("password").value;
         let salary = document.getElementById("salary").value;
         if (firstName == "" || lastName == "" || phone == "" || email == "" || anotherEmail == "" || password == "" || salary == "") {
-            alert("error")
+            alert("Submit valid data")
         }
 
         else if (userError.innerHTML == "" && lastNameError.innerHTML == "" &&
