@@ -28,7 +28,7 @@ saveButton.addEventListener("click", (event) => {
         .catch(error => console.log(error));
 })
 
-let header = { id: "#", name: "NAME", description: "DESCRIPTION", selectOption: "STATUS", rate: "RATE", balance: "BALANCE", deposit: "DEPOSITE", action: "ACTION" }
+let header = { id: "#", name: "NAME", description: "DESCRIPTION", selectOption: "STATUS", rate: "RATE", balance: "BALANCE", deposit: "DEPOSITE" }
 
 let table = document.getElementById("table");
 // // Create table heading
@@ -45,6 +45,11 @@ function CreateTableHeading(table, data) {
         th.appendChild(text);
         tr.appendChild(th);
     }
+    let th = document.createElement("th");
+    th.className = "tableHeading";
+    let text = document.createTextNode("ACTION");
+    th.appendChild(text);
+    tr.appendChild(th);
 }
 CreateTableHeading(table, header);
 // // end : table heading
@@ -71,6 +76,9 @@ function createTableBody(table) {
                 td.appendChild(text);
                 tr.appendChild(td);
             }
+            let td = document.createElement("td");
+            tr.appendChild(td);
+
             let deleteButton = document.createElement("button");
             deleteButton.className = "delete-button";
             let deleteText = document.createTextNode("Delete");
@@ -79,8 +87,7 @@ function createTableBody(table) {
                 table.deleteRow(tr.rowIndex);
             })
             deleteButton.appendChild(deleteText);
-            tr.appendChild(deleteButton);
-
+            td.appendChild(deleteButton);
             let editButton = document.createElement("button");
             editButton.className = "edit-button";
             let editText = document.createTextNode("Edit");
@@ -88,7 +95,7 @@ function createTableBody(table) {
                 rowEdit(element)
             })
             editButton.appendChild(editText);
-            tr.appendChild(editButton);
+            td.appendChild(editButton);
         }
     });
 }
