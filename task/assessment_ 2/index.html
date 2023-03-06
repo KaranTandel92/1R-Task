@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div>
+    <div class="mainContainer d-flex f-column">
         <section class="formSection">
             <!-- start : header -->
             <header class="formHead d-flex justify-space-between">
@@ -23,7 +23,7 @@
             <!-- end : header -->
             <div>
                 <!-- start : form -->
-                <form id="form">
+                <form id="form" class="mainForm">
                     <div class="formFirstSection d-flex justify-space-between">
                         <div class="d-flex f-column flex-1 margin-bottom-20">
                             <label for="" class="headingName">Name</label>
@@ -39,8 +39,8 @@
                         <div class="d-flex f-column flex-1 margin-bottom-20">
                             <label for="" class="headingName">STATUS</label>
                             <select name="selectOption" id="dataStatus" class="dataBox">
-                                <option value="Open" class="selectStatus">Select Status</option>
-                                <option value="Open">Open</option>
+                                <option value="" class="selectStatus">Select Status</option>
+                                <option value="Open" class="option1">Open</option>
                                 <option value="Error">Error</option>
                                 <option value="Success">Success</option>
                                 <option value="Inactive">Inactive</option>
@@ -76,7 +76,7 @@
                 <!-- end : form -->
             </div>
         </section>
-        <section class="tableSection">
+        <section class="tableSection d-flex f-column">
             <!-- start : table -->
             <table id="table"></table>
             <!-- end : table -->

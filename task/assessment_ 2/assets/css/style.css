@@ -4,6 +4,12 @@ body {
     width: 100%;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
 /* universal class */
 * {
     padding: 0;
@@ -39,6 +45,11 @@ body {
 }
 
 /* end : variables */
+
+.mainContainer {
+    overflow: hidden;
+    flex-grow: 1;
+}
 
 /* start : form style */
 
@@ -117,6 +128,7 @@ body {
     font-size: var(--font-size-14);
     font-weight: var(--font-weight-500);
     border: 0;
+    cursor: pointer;
 }
 
 .saveButton,
@@ -129,6 +141,7 @@ body {
     border: 0;
     border-radius: 6px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .updateButton {
@@ -142,12 +155,46 @@ span {
     font-size: 12px;
 }
 
+.errorOption {
+    color: red;
+    padding: 1px 10px;
+    border-radius: 10px;
+    background-color: #FAF0F3;
+}
+
+.openOption {
+    color: #4F5AED;
+    padding: 1px 10px;
+    border-radius: 10px;
+    background-color: #F0F1FA;
+}
+
+.successOption {
+    color: #14804A;
+    padding: 1px 10px;
+    border-radius: 10px;
+    background-color: #E1FCEF;
+}
+
+.inactiveOption {
+    color: #5A6376;
+    padding: 1px 10px;
+    border-radius: 10px;
+    background-color: #E9EDF5;
+}
+
 /* end : form style */
 
 /* start : table style */
+
+.tableSection {
+    overflow: auto;
+}
+
 #table {
     width: 100%;
     border-collapse: collapse;
+    overflow: hidden;
 }
 
 .edit-button {
@@ -157,14 +204,14 @@ span {
     border-radius: 7px;
     cursor: pointer;
     border: 0;
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.685);
     color: #FFFFFF;
 }
 
 .delete-button {
     height: 35px;
     width: 75px;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.678);
     color: white;
     font-size: 600;
     border-radius: 7px;
@@ -210,6 +257,26 @@ tr:nth-child(odd) {
     align-content: center;
 }
 
+.nameOfUser {
+    color: #171C26;
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-500);
+}
+
+.userCurrentBalance {
+    color: #D12953;
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-400);
+}
+
+.rateOfUser,
+.depositOfUser,
+.userDescription {
+    color: #464F60;
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-400);
+}
+
 
 /* end : table style */
 
@@ -246,6 +313,18 @@ tr:nth-child(odd) {
 /* end : helper class */
 
 /* start : responsive */
+
+@media (max-width:1085px) {
+
+    .edit-button,
+    .delete-button {
+        margin: 2px;
+    }
+
+    .edit-button {
+        width: 75px;
+    }
+}
 
 @media (max-width: 950px) {
     th {
