@@ -77,18 +77,34 @@ function createTableBody(data) {
         for (const item in header) {
             let td = document.createElement("td");
             td.className = "tableData";
-            let text = document.createTextNode(element[item]);
+
             if (item == "name") {
                 td.className = "nameOfUser";
             }
             if (item == "rate") {
-                td.className = "rateOfUser";
+                if (element[item] == "$") {
+                    let text = document.createTextNode("$");
+                    td.className = "rateOfUser";
+                    td.appendChild(text);
+                }
             }
             if (item == "deposit") {
                 td.className = "depositOfUser";
             }
             if (item == "description") {
                 td.className = "userDescription";
+            }
+            if (item == "balance") {
+                if (element[item] <= 0) {
+                    td.className = "userCurrentBalance";
+                    let text = document.createTextNode("-$");
+                    td.appendChild(text);
+                }
+                else {
+                    td.className = "userCurrentBalancePositive";
+                    let text = document.createTextNode("$");
+                    td.appendChild(text);
+                }
             }
             if (item == "selectOption") {
                 let span = document.createElement("span");
@@ -105,15 +121,27 @@ function createTableBody(data) {
                 else if (element[item] == "Inactive") {
                     span.className = "inactiveOption"
                 }
+                let text = document.createTextNode(element[item]);
                 span.appendChild(text);
                 td.appendChild(span);
             }
             else {
-                td.appendChild(text);
+                if (item == "balance") {
+                    if (element[item] <= 0) {
+                        let text = document.createTextNode((element[item]) * (-1));
+                        td.appendChild(text);
+                    }
+                    else {
+                        let text = document.createTextNode((element[item]));
+                        td.appendChild(text);
+                    }
+                }
+                else {
+                    let text = document.createTextNode(element[item]);
+                    td.appendChild(text);
+                }
             }
-            if (item == "balance") {
-                td.className = "userCurrentBalance";
-            }
+
             tr.appendChild(td);
         }
         let td = document.createElement("td");
@@ -269,7 +297,7 @@ function balanceValidation() {
         document.getElementById("balanceError").innerHTML = "This Field is Required"
         document.getElementById("balanceError").classList.add("color-red");
     }
-    else if (!checkBalance.value.trim().match(/^[0-9]*$/)) {
+    else if (!checkBalance.value.trim().match(/^[-0-9]*$/)) {
         document.getElementById("balanceError").innerHTML = "Enter valid amount"
         document.getElementById("balanceError").classList.add("color-red");
     }

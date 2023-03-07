@@ -269,6 +269,12 @@ tr:nth-child(odd) {
     font-weight: var(--font-weight-400);
 }
 
+.userCurrentBalancePositive {
+    color: green;
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-400);
+}
+
 .rateOfUser,
 .depositOfUser,
 .userDescription {
