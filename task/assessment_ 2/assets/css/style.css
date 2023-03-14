@@ -157,28 +157,28 @@ span {
 
 .errorOption {
     color: red;
-    padding: 1px 10px;
+    padding: 5px 10px;
     border-radius: 10px;
     background-color: #FAF0F3;
 }
 
 .openOption {
     color: #4F5AED;
-    padding: 1px 10px;
+    padding: 5px 10px;
     border-radius: 10px;
     background-color: #F0F1FA;
 }
 
 .successOption {
     color: #14804A;
-    padding: 1px 10px;
+    padding: 5px 10px;
     border-radius: 10px;
     background-color: #E1FCEF;
 }
 
 .inactiveOption {
     color: #5A6376;
-    padding: 1px 10px;
+    padding: 5px 10px;
     border-radius: 10px;
     background-color: #E9EDF5;
 }

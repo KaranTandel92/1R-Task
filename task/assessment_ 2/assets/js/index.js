@@ -1,5 +1,9 @@
 let saveButton = document.querySelector(".saveButton");
 let form = document.querySelector(".mainForm");
+let cancelButton = document.querySelector(".cancelButton");
+cancelButton.addEventListener("click", (event) => {
+    event.preventDefault();
+})
 
 // saveButton.addEventListener("click", (event) => {
 //     event.preventDefault();
@@ -34,7 +38,7 @@ let header = { id: "#", name: "NAME", description: "DESCRIPTION", selectOption: 
 
 let table = document.getElementById("table");
 // // Create table heading
-function CreateTableHeading(table, data) {
+function createTableHeading(table, data) {
     let thead = document.createElement("thead");
     table.appendChild(thead);
     let tr = document.createElement("tr");
@@ -52,17 +56,18 @@ function CreateTableHeading(table, data) {
     th.appendChild(text);
     tr.appendChild(th);
 }
-CreateTableHeading(table, header);
-// // end : table heading
+createTableHeading(table, header);
+// end : table heading
 
-async function checkUserHosting() {
+// use this function for get data from the API
+async function getData() {
     let req = await fetch('http://localhost:3000/dataStore');
     let res = await req.json();
     createTableBody(res);
 };
 
 window.addEventListener("load", (e) => {
-    checkUserHosting()
+    getData()
 })
 
 // // create table body
@@ -201,7 +206,7 @@ function rowEdit(element) {
             body: JSON.stringify(editData),
         })
             .then((response) => (response.json()))
-            .then(data => console.log(data));
+        // .then(data => console.log(data));
     })
 }
 // start : validation
