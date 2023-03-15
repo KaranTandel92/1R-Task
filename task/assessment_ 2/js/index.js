@@ -1,5 +1,5 @@
 let saveButton = document.querySelector(".saveButton");
-let form = document.getElementById("form");
+let form = document.querySelector(".mainForm");
 let cancelButton = document.querySelector(".cancelButton");
 cancelButton.addEventListener("click", (event) => {
     event.preventDefault();
@@ -40,13 +40,12 @@ let table = document.getElementById("table");
 // // Create table heading
 function createTableHeading(table, data) {
     let thead = document.createElement("thead");
-    thead.className = "tableHead";
     table.appendChild(thead);
     let tr = document.createElement("tr");
     thead.appendChild(tr);
     for (const key in data) {
         let th = document.createElement("th");
-        th.className = "tableHeadingData";
+        th.className = "tableHeading"
         let text = document.createTextNode(data[key]);
         th.appendChild(text);
         tr.appendChild(th);
@@ -60,12 +59,16 @@ function createTableHeading(table, data) {
 createTableHeading(table, header);
 // end : table heading
 
-// Get data into the table from API
+// use this function for get data from the API
 async function getData() {
     let req = await fetch('http://localhost:3000/dataStore');
     let res = await req.json();
     createTableBody(res);
 };
+
+window.addEventListener("load", (e) => {
+    getData()
+})
 
 // // create table body
 function createTableBody(data) {
@@ -363,10 +366,6 @@ saveButton.addEventListener("click", (e) => {
         alert("Submit valid data")
     }
 });
-
-window.addEventListener("load", (e) => {
-    getData()
-})
 
 
 

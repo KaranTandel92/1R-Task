@@ -10,35 +10,35 @@
 </head>
 
 <body>
-    <div class="mainContainer d-flex f-column">
-        <section class="formSection">
+    <div class="mainContainer d-flex flex-column">
+        <section class="form-section">
             <!-- start : header -->
-            <header class="formHead d-flex justify-space-between">
-                <button class="filterButton d-flex"><img src="./assets/images/filter_icon.png" alt="filter-icon"
+            <header class="form-head d-flex justify-space-between">
+                <button class="filter-button d-flex"><img src="./assets/images/filter_icon.png" alt="filter-icon"
                         class="icon">
                     Status</button>
-                <button class="addButton"><img src="./assets/images/+ Shine.png" alt="+ symbol" class="icon"> Add
+                <button class="add-button"><img src="./assets/images/+ Shine.png" alt="+ symbol" class="icon"> Add
                     customer</button>
             </header>
             <!-- end : header -->
             <div>
                 <!-- start : form -->
-                <form id="form" class="mainForm">
-                    <div class="formFirstSection d-flex justify-space-between">
-                        <div class="d-flex f-column flex-1 margin-bottom-20">
-                            <label for="" class="headingName">Name</label>
-                            <input type="text" placeholder="Enter Name" id="userName" class="dataBox" name="name">
+                <form id="form">
+                    <div class="form-first-section d-flex justify-space-between">
+                        <div class="d-flex flex-column flex-1 mb-20">
+                            <label for="userName" class="heading-name">NAME</label>
+                            <input type="text" placeholder="Enter Name" id="userName" class="data-box" name="name">
                             <span id="userError"></span>
                         </div>
-                        <div class="d-flex f-column flex-1 margin-bottom-20">
-                            <label for="" class="headingName">DESCRIPTION</label>
-                            <input type="text" placeholder="Enter Description" id="writeDescription" class="dataBox"
+                        <div class="d-flex flex-column flex-1 mb-20">
+                            <label for="writeDescription" class="heading-name">DESCRIPTION</label>
+                            <input type="text" placeholder="Enter Description" id="writeDescription" class="data-box"
                                 name="description">
                             <span id="descriptionError"></span>
                         </div>
-                        <div class="d-flex f-column flex-1 margin-bottom-20">
-                            <label for="" class="headingName">STATUS</label>
-                            <select name="selectOption" id="dataStatus" class="dataBox">
+                        <div class="d-flex flex-column flex-1 mb-20">
+                            <label for="dataStatus" class="heading-name">STATUS</label>
+                            <select name="selectOption" id="dataStatus" class="data-box">
                                 <option value="" class="selectStatus">Select Status</option>
                                 <option value="Open" class="option1">Open</option>
                                 <option value="Error">Error</option>
@@ -48,26 +48,26 @@
                             <span id="optionError"></span>
                         </div>
                     </div>
-                    <div class="formSecondSection d-flex justify-space-between">
-                        <div class="d-flex f-column flex-1 margin-bottom-13">
-                            <label for="" class="headingName">RATE</label>
-                            <input type="text" placeholder="Enter Rate" class="dataBox" id="writeRate" name="rate">
+                    <div class="form-second-section d-flex justify-space-between">
+                        <div class="d-flex flex-column flex-1 mb-13">
+                            <label for="writeRate" class="heading-name">RATE</label>
+                            <input type="text" placeholder="Enter Rate" class="data-box" id="writeRate" name="rate">
                             <span id="rateError"></span>
                         </div>
-                        <div class="d-flex f-column flex-1 margin-bottom-13">
-                            <label for="" class="headingName">BALANCE</label>
-                            <input type="text" placeholder="Enter Balance" class="dataBox" id="checkBalance"
+                        <div class="d-flex flex-column flex-1 mb-13">
+                            <label for="checkBalance" class="heading-name">BALANCE</label>
+                            <input type="text" placeholder="Enter Balance" class="data-box" id="checkBalance"
                                 name="balance">
                             <span id="balanceError"></span>
                         </div>
-                        <div class="d-flex f-column flex-1 margin-bottom-13">
-                            <label for="" class="headingName">DEPOSITE</label>
-                            <input type="text" placeholder="Enter Deposit" class="dataBox" id="userDeposite"
+                        <div class="d-flex flex-column flex-1 mb-13">
+                            <label for="userDeposite" class="heading-name">DEPOSIT</label>
+                            <input type="text" placeholder="Enter Deposit" class="data-box" id="userDeposite"
                                 name="deposit">
                             <span id="depositError"></span>
                         </div>
                     </div>
-                    <div class="dataUpdateButton d-flex justify-end">
+                    <div class="update-data-button d-flex justify-end">
                         <button class="cancelButton">Cancel</button>
                         <button class="saveButton">Save</button>
                         <button class="updateButton">Update Data</button>
@@ -76,14 +76,14 @@
                 <!-- end : form -->
             </div>
         </section>
-        <section class="tableSection d-flex f-column">
+        <section class="table-section d-flex flex-column">
             <!-- start : table -->
             <table id="table"></table>
             <!-- end : table -->
         </section>
     </div>
 
-    <script src="./assets/js/index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
