@@ -64,7 +64,7 @@ body {
 }
 
 .filter-button {
-    padding: 15px 25px;
+    padding: 10px 15px;
     border-radius: 7px;
     background-color: #FFFFFF;
     color: var(--color-blue);
@@ -81,7 +81,7 @@ body {
 }
 
 .add-button {
-    padding: 15px 25px;
+    padding: 10px 15px;
     background-color: var(--color-light-blue);
     border: 0;
     border-radius: 7px;
@@ -116,7 +116,7 @@ body {
 }
 
 .cancelButton {
-    padding: 15px 25px;
+    padding: 11px 15px;
     background-color: var(--color-gray);
     border-radius: 7px;
     color: #FFFFFF;
@@ -128,7 +128,7 @@ body {
 
 .saveButton,
 .updateButton {
-    padding: 15px 25px;
+    padding: 11px 15px;
     background-color: var(--color-blue);
     color: #FFFFFF;
     font-size: var(--font-size-14);
@@ -193,7 +193,7 @@ body {
 }
 
 .edit-button {
-    padding: 15px 25px;
+    padding: 10px 15px;
     font-size: 600;
     border-radius: 7px;
     cursor: pointer;
@@ -203,7 +203,7 @@ body {
 }
 
 .delete-button {
-    padding: 15px 25px;
+    padding: 10px 15px;
     background-color: rgba(255, 0, 0, 0.678);
     color: white;
     font-size: 600;

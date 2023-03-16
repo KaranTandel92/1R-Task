@@ -61,13 +61,22 @@ createTableHeading(table, header);
 // end : table heading
 
 // Get data into the table from API
-async function getData() {
-    let req = await fetch('http://localhost:3000/dataStore');
-    let res = await req.json();
-    createTableBody(res);
-};
+// async function getData() {
+//     let req = await fetch('http://localhost:3000/dataStore');
+//     let res = await req.json();
+//     createTableBody(res);
+// };
 
+// Get data from the API
+function getData() {
+    fetch('http://localhost:3000/dataStore')
+        .then((response) => response.json()
+            .then((data) => {
+                createTableBody(data);
+            }))
+}
 // // create table body
+
 function createTableBody(data) {
 
     let tbody = document.createElement("tbody");
@@ -152,6 +161,7 @@ function createTableBody(data) {
         deleteButton.className = "delete-button";
         let deleteText = document.createTextNode("Delete");
         deleteButton.addEventListener("click", e => {
+            e.preventDefault();
             fetch(`http://localhost:3000/dataStore/${element["id"]}`, { method: "DELETE" })
             table.deleteRow(tr.rowIndex);
         })
@@ -161,6 +171,7 @@ function createTableBody(data) {
         editButton.className = "edit-button";
         let editText = document.createTextNode("Edit");
         editButton.addEventListener("click", e => {
+            e.preventDefault();
             rowEdit(element)
         })
         editButton.appendChild(editText);
@@ -168,6 +179,7 @@ function createTableBody(data) {
     }
 }
 // end : table body
+
 
 let updateButton = document.querySelector(".updateButton");
 
@@ -186,6 +198,7 @@ function rowEdit(element) {
     deposit.value = element.deposit;
 
     updateButton.addEventListener("click", e => {
+        e.preventDefault();
         let editData = {
             name: name.value,
             description: description.value,
@@ -335,7 +348,7 @@ userDeposite.addEventListener("keyup", () => {
 })
 saveButton.addEventListener("click", (e) => {
     // debugger
-    // e.preventDefault();
+    e.preventDefault();
     let name = document.getElementById("userName");
     let description = document.getElementById("writeDescription");
     let selectOption = document.getElementById("dataStatus");
@@ -366,7 +379,7 @@ saveButton.addEventListener("click", (e) => {
 
 window.addEventListener("load", (e) => {
     getData()
-})
+});
 
 
 
