@@ -1,5 +1,5 @@
 let saveButton = document.querySelector(".saveButton");
-let form = document.querySelector(".mainForm");
+let form = document.getElementById("form");
 let cancelButton = document.querySelector(".cancelButton");
 cancelButton.addEventListener("click", (event) => {
     event.preventDefault();
@@ -40,12 +40,13 @@ let table = document.getElementById("table");
 // // Create table heading
 function createTableHeading(table, data) {
     let thead = document.createElement("thead");
+    thead.className = "tableHead";
     table.appendChild(thead);
     let tr = document.createElement("tr");
     thead.appendChild(tr);
     for (const key in data) {
         let th = document.createElement("th");
-        th.className = "tableHeading"
+        th.className = "tableHeadingData";
         let text = document.createTextNode(data[key]);
         th.appendChild(text);
         tr.appendChild(th);
@@ -59,18 +60,23 @@ function createTableHeading(table, data) {
 createTableHeading(table, header);
 // end : table heading
 
-// use this function for get data from the API
-async function getData() {
-    let req = await fetch('http://localhost:3000/dataStore');
-    let res = await req.json();
-    createTableBody(res);
-};
+// Get data into the table from API
+// async function getData() {
+//     let req = await fetch('http://localhost:3000/dataStore');
+//     let res = await req.json();
+//     createTableBody(res);
+// };
 
-window.addEventListener("load", (e) => {
-    getData()
-})
-
+// Get data from the API
+function getData() {
+    fetch('http://localhost:3000/dataStore')
+        .then((response) => response.json()
+            .then((data) => {
+                createTableBody(data);
+            }))
+}
 // // create table body
+
 function createTableBody(data) {
 
     let tbody = document.createElement("tbody");
@@ -155,6 +161,7 @@ function createTableBody(data) {
         deleteButton.className = "delete-button";
         let deleteText = document.createTextNode("Delete");
         deleteButton.addEventListener("click", e => {
+            e.preventDefault();
             fetch(`http://localhost:3000/dataStore/${element["id"]}`, { method: "DELETE" })
             table.deleteRow(tr.rowIndex);
         })
@@ -164,6 +171,7 @@ function createTableBody(data) {
         editButton.className = "edit-button";
         let editText = document.createTextNode("Edit");
         editButton.addEventListener("click", e => {
+            e.preventDefault();
             rowEdit(element)
         })
         editButton.appendChild(editText);
@@ -171,6 +179,7 @@ function createTableBody(data) {
     }
 }
 // end : table body
+
 
 let updateButton = document.querySelector(".updateButton");
 
@@ -189,6 +198,7 @@ function rowEdit(element) {
     deposit.value = element.deposit;
 
     updateButton.addEventListener("click", e => {
+        e.preventDefault();
         let editData = {
             name: name.value,
             description: description.value,
@@ -338,7 +348,7 @@ userDeposite.addEventListener("keyup", () => {
 })
 saveButton.addEventListener("click", (e) => {
     // debugger
-    // e.preventDefault();
+    e.preventDefault();
     let name = document.getElementById("userName");
     let description = document.getElementById("writeDescription");
     let selectOption = document.getElementById("dataStatus");
@@ -367,7 +377,13 @@ saveButton.addEventListener("click", (e) => {
     }
 });
 
+// let selectData = []
+// let dataFilter = document.getElementById("search");
+// let createOPtion = document.createElement("option");
+// dataFilter.appendChild(createOPtion);
+// let text = document.createTextNode("Open")
+// createOPtion.appendChild(text);
 
-
-
-
+window.addEventListener("load", (e) => {
+    getData()
+});
